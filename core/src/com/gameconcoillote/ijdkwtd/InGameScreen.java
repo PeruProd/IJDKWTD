@@ -24,8 +24,8 @@ public class InGameScreen implements Screen{
 		level.add(new Background(new Texture(Gdx.files.internal("Background1.jpg"))));
 		this.game = game;
 		
-		//test switchitem
-		entities.add(new SwitchItem(new Texture(Gdx.files.internal("badlogic.jpg")),300,214));
+		//test takeitem
+		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),300,214));
 	}	 
 
     @Override

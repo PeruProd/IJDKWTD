@@ -2,15 +2,15 @@ package com.gameconcoillote.ijdkwtd;
 
 import com.badlogic.gdx.graphics.Texture;
 
-public class SwitchItem extends Item
+public class TakeItem extends Item
 {
 
-	public SwitchItem(Texture t) {
+	public TakeItem(Texture t) {
 		super(t);
 
 	}
 	
-	public SwitchItem(Texture t,int x,int y) {
+	public TakeItem(Texture t,int x,int y) {
 		super(t,x,y);
 
 	}
