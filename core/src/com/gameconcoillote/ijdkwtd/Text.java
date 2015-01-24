@@ -1,9 +1,5 @@
 package com.gameconcoillote.ijdkwtd;
 
-/**
- * Created by naum on 1/24/15.
- */
-
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
