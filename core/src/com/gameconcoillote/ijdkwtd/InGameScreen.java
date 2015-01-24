@@ -19,7 +19,6 @@ public class InGameScreen implements Screen{
 	private Player player;
 	private SpriteBatch batch;
 	private BitmapFont font;
-	private String text="PeruProd";
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	
