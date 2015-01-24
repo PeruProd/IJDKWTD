@@ -14,7 +14,7 @@ public class DesktopLauncher {
 		config.width=ijdkwtd.WIDTH;
 		config.height=ijdkwtd.HEIGHT;
 		config.resizable=false;
-		config.addIcon("logo.png",Files.FileType.Local);
+		config.addIcon("logo_icone_32.png",Files.FileType.Local);
 		new LwjglApplication(new ijdkwtd(), config);	
 	}
 }
