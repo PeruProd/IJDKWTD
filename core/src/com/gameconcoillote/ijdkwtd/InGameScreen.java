@@ -27,9 +27,15 @@ public class InGameScreen implements Screen{
 		//background
 		level.add(new Background(new Texture(Gdx.files.internal("Background1.jpg"))));
 		this.game = game;
+<<<<<<< HEAD
 		batch=new SpriteBatch();
 		font= new BitmapFont();
 		font.setColor(Color.YELLOW);
+=======
+		
+		//test takeitem
+		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),300,214));
+>>>>>>> 09310d4a49ec2fd8bcf3940d4ba780ddfb858245
 	}	 
 
     @Override
@@ -52,6 +58,11 @@ public class InGameScreen implements Screen{
     public Player getPlayer(){
     	return this.player;
     } 
+    
+    public ArrayList<Entity> getEntities(){
+    	return this.entities;
+    } 
+    
     @Override
     public void resize(int width, int height){
         // TODO Auto-generated method stub    

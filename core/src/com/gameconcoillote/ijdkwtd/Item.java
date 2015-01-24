@@ -16,6 +16,19 @@ public abstract class Item extends Entity
 		super(t,x,y);
 	}
 	
+	public boolean collideWith(int x,int y)
+	{
+		return (x > this.box.x && x < this.box.x+this.box.width) && 
+		(y < ijdkwtd.HEIGHT -this.box.y && y > ijdkwtd.HEIGHT-this.box.y-this.box.height);
+
+	}
+	
+	public void update(int dt)
+	{
+		super.update(dt);
+		
+	}
+	
 	//define the behavior of the item when activated
 	public abstract void activate();
 }

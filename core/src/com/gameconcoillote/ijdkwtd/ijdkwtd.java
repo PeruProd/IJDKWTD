@@ -8,15 +8,17 @@ import com.badlogic.gdx.graphics.GL20;
 
 
 public class ijdkwtd extends Game implements InputProcessor{
-	private Screen inGameScreen;	   
+	private Screen inGameScreen, menuScreen;
+	public final static int WIDTH = 1024;
+	public final static int HEIGHT = 768;
     private int dt;//main game loop time
       
     @Override
     public void create(){
         inGameScreen = new InGameScreen(this);
+        menuScreen = new MenuScreen(this);
         Gdx.input.setInputProcessor(this);
-        setScreen(inGameScreen);
-
+        setScreen(menuScreen);
     }
 
     /*@Override
@@ -49,13 +51,29 @@ public class ijdkwtd extends Game implements InputProcessor{
 
             ((InGameScreen) this.inGameScreen).getPlayer().move(screenX, screenY);
         }
+        else if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0){
+
+            setScreen(inGameScreen);
+        }
         return false;
     }
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button){
         if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0) {
             ((InGameScreen) this.inGameScreen).getPlayer().changeAnimation(0);
+            
+            for(Entity e: ((InGameScreen) this.inGameScreen).getEntities())
+            {
+            	if(e instanceof Item)
+            	{
+            		if(((Item) e).collideWith(screenX, screenY))
+            		{
+            			((Item) e).activate();
+            		}
+            	}
+            }
         }
+        
         return false;
     }
     @Override
