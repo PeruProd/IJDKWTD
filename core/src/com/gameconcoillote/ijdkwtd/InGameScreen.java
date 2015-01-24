@@ -14,11 +14,14 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class InGameScreen implements Screen{    
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
 	private ArrayList<Background> level = new  ArrayList<Background>();
+	private ArrayList<String> dialogText = new ArrayList<String>();
+
 	private Player player;
 	private SpriteBatch batch;
 	private BitmapFont font;
 	private String text="PeruProd";
 	private ijdkwtd game;
+	private int dialogCompteur=0;
 	
 	public InGameScreen(ijdkwtd game){
 		//player
@@ -32,6 +35,15 @@ public class InGameScreen implements Screen{
 		font.setColor(Color.YELLOW);		
 		//test takeitem
 		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),300,214));
+
+		//DIALOG//
+		dialogText.add("Hi you.");
+		dialogText.add("How are you ?");
+		dialogText.add("Seems like we're trapped...");
+		dialogText.add("You're not very talkative...");
+		dialogText.add("Well, we need to get out of this place.");
+		dialogText.add("Say something !");
+
 	}	 
 
     @Override
@@ -48,12 +60,18 @@ public class InGameScreen implements Screen{
         	e.draw(this.batch);
         }
         batch.begin();
-        player.saying(batch,font,text);
+        player.saying(batch,font,dialogText.get(dialogCompteur));
         batch.end();
-    }   
+    }
+
     public Player getPlayer(){
     	return this.player;
-    } 
+    }
+
+	public void nextDialog(){
+		if (dialogText.size() > dialogCompteur+1)
+		dialogCompteur++;
+	}
     
     public ArrayList<Entity> getEntities(){
     	return this.entities;

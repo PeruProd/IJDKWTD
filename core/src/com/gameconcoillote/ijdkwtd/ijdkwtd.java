@@ -11,7 +11,6 @@ public class ijdkwtd extends Game implements InputProcessor{
 	private Screen inGameScreen, menuScreen;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
-    private int dt;//main game loop time
       
     @Override
     public void create(){
@@ -46,8 +45,11 @@ public class ijdkwtd extends Game implements InputProcessor{
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button){
         if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0){
-
-            ((InGameScreen) this.inGameScreen).getPlayer().move(screenX, screenY);
+            if (screenY > 300) {
+                ((InGameScreen) this.inGameScreen).getPlayer().move(screenX, screenY);
+            }else{
+                ((InGameScreen) this.inGameScreen).nextDialog();
+            }
         }
         else if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0){
             if ( ((MenuScreen)getScreen()).menuLang ) {
