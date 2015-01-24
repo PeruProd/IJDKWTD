@@ -1,19 +1,23 @@
 package com.gameconcoillote.ijdkwtd;
 
 import java.util.ArrayList;
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class InGameScreen implements Screen{    
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
 	private ArrayList<Background> level = new  ArrayList<Background>();
 	private Player player;
-	private SpriteBatch batch = new SpriteBatch();
-
+	private SpriteBatch batch;
+	private BitmapFont font;
+	private String text="PeruProd";
 	private ijdkwtd game;
 	
 	public InGameScreen(ijdkwtd game){
@@ -23,6 +27,9 @@ public class InGameScreen implements Screen{
 		//background
 		level.add(new Background(new Texture(Gdx.files.internal("Background1.jpg"))));
 		this.game = game;
+		batch=new SpriteBatch();
+		font= new BitmapFont();
+		font.setColor(Color.YELLOW);
 	}	 
 
     @Override
@@ -38,7 +45,9 @@ public class InGameScreen implements Screen{
         	e.update((int)delta);
         	e.draw(this.batch);
         }
-
+        batch.begin();
+        player.saying(batch,font,text);
+        batch.end();
     }   
     public Player getPlayer(){
     	return this.player;

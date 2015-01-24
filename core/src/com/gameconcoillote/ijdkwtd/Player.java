@@ -2,6 +2,8 @@ package com.gameconcoillote.ijdkwtd;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
 public class Player extends Entity{
@@ -89,5 +91,8 @@ public class Player extends Entity{
 			this.changeAnimation(0);
 		}
 		super.update(dt);
+	}
+	public void saying(SpriteBatch batch, BitmapFont font,String texte){
+		font.draw(batch,texte,Gdx.graphics.getWidth()-600,Gdx.graphics.getHeight()-100);
 	}
 }
