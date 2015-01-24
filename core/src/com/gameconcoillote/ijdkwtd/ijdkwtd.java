@@ -9,8 +9,8 @@ import com.badlogic.gdx.graphics.GL20;
 
 public class ijdkwtd extends Game implements InputProcessor{
 	private Screen inGameScreen, menuScreen;
-	public final static int WIDTH = 1024;
-	public final static int HEIGHT = 768;
+	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
+	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
     private int dt;//main game loop time
       
     @Override
@@ -45,15 +45,16 @@ public class ijdkwtd extends Game implements InputProcessor{
     }
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button){
-        //System.out.println("Mouse coords:" + screenX + " " + screenY);
-
         if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0){
 
             ((InGameScreen) this.inGameScreen).getPlayer().move(screenX, screenY);
         }
         else if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0){
-
-            setScreen(inGameScreen);
+            if ( ((MenuScreen)getScreen()).menuLang ) {
+                ((MenuScreen) getScreen()).gotoMenuLangue();
+            }else {
+                setScreen(inGameScreen);
+            }
         }
         return false;
     }

@@ -9,14 +9,15 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import java.util.ArrayList;
 
 public class MenuScreen implements Screen{
-	private Background level;
+	private Background start;
 	private SpriteBatch batch = new SpriteBatch();
+	public boolean menuLang = true;
 
 	private ijdkwtd game;
 
 	public MenuScreen(ijdkwtd game){
 		//background
-		level = new Background(new Texture(Gdx.files.internal("Background2.jpg")));
+		start = new Background(new Texture(Gdx.files.internal("Menu_start.png")));
 		this.game = game;
 	}	 
 
@@ -25,9 +26,14 @@ public class MenuScreen implements Screen{
 		delta *= 1000;
 		Gdx.graphics.getGL20().glClearColor( 1, 0, 0, 1 );
 		Gdx.graphics.getGL20().glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
-        level.update((int)delta);
-        level.draw(this.batch);
+        start.update((int)delta);
+        start.draw(this.batch);
     }
+
+	public void gotoMenuLangue(){
+		start = new Background(new Texture(Gdx.files.internal("Menu_langue.png")));
+		menuLang = false;
+	}
 
     @Override
     public void resize(int width, int height){
