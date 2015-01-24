@@ -43,6 +43,10 @@ public class InGameScreen implements Screen{
 		dialogText.add("You're not very talkative...");
 		dialogText.add("Well, we need to get out of this place.");
 		dialogText.add("Say something !");
+		dialogText.add("Say apple !");
+		dialogText.add("At least, you don't jump for no reason.");
+		dialogText.add("I don't see anything, help me man !");
+
 
 	}	 
 
