@@ -8,6 +8,9 @@ import com.badlogic.gdx.graphics.GL20;
 
 
 public class ijdkwtd extends Game implements InputProcessor{
+	public final static int WIDTH = 1024;
+	public final static int HEIGHT = 768;
+	
 	private Screen inGameScreen;	   
     private int dt;//main game loop time
       
@@ -55,7 +58,19 @@ public class ijdkwtd extends Game implements InputProcessor{
     public boolean touchUp(int screenX, int screenY, int pointer, int button){
         if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0) {
             ((InGameScreen) this.inGameScreen).getPlayer().changeAnimation(0);
+            
+            for(Entity e: ((InGameScreen) this.inGameScreen).getEntities())
+            {
+            	if(e instanceof Item)
+            	{
+            		if(((Item) e).collideWith(screenX, screenY))
+            		{
+            			((Item) e).activate();
+            		}
+            	}
+            }
         }
+        
         return false;
     }
     @Override

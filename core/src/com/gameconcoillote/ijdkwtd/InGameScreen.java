@@ -23,6 +23,9 @@ public class InGameScreen implements Screen{
 		//background
 		level.add(new Background(new Texture(Gdx.files.internal("Background1.jpg"))));
 		this.game = game;
+		
+		//test switchitem
+		entities.add(new SwitchItem(new Texture(Gdx.files.internal("badlogic.jpg")),300,214));
 	}	 
 
     @Override
@@ -43,6 +46,11 @@ public class InGameScreen implements Screen{
     public Player getPlayer(){
     	return this.player;
     } 
+    
+    public ArrayList<Entity> getEntities(){
+    	return this.entities;
+    } 
+    
     @Override
     public void resize(int width, int height){
         // TODO Auto-generated method stub    

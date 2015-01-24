@@ -19,7 +19,7 @@ public class Entity{
 	public Entity(Texture t,int x,int y){
 		this.textures .add(new AnimatedTexture(t));
 		this.currentAnim = 0;
-		this.box = new Rectangle(x,y,0,0);
+		this.box = new Rectangle(x,y,t.getWidth(),t.getHeight());
 		this.speed = new Vector2(100,100);//default speed of 5px/s
 		this.move = new Vector2(0,0);	
 	}	
