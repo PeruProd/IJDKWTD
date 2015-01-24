@@ -1,7 +1,9 @@
 package com.gameconcoillote.ijdkwtd.desktop;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.badlogic.gdx.Files;
 import com.gameconcoillote.ijdkwtd.ijdkwtd;
 
 public class DesktopLauncher {	
@@ -11,6 +13,8 @@ public class DesktopLauncher {
 		config.title="Game Cancoillotte 2015: We Just Don't Know What To Do";
 		config.width=ijdkwtd.WIDTH;
 		config.height=ijdkwtd.HEIGHT;
+		config.resizable=false;
+		config.addIcon("logo.png",Files.FileType.Local);
 		new LwjglApplication(new ijdkwtd(), config);	
 	}
 }
