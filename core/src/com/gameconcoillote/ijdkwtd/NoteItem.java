@@ -16,8 +16,10 @@ public class NoteItem extends TakeItem
 	
 	public void use()
 	{
-		
-		this.player.getGame().getNotePanel().setVisible(true);;
+		if(game.getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0)
+		{
+			((InGameScreen) game.getScreen()).getNotePanel().setVisible(true);
+		}
 	}
 
 }

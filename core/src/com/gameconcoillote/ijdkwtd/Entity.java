@@ -16,6 +16,7 @@ public class Entity{
 	protected ijdkwtd game;
 	
 	public Entity(ijdkwtd game, Texture t){this(game,t,0,0);}
+	
 	public Entity(ijdkwtd game, Texture t,int x,int y){
 		this.textures .add(new AnimatedTexture(t));
 		this.currentAnim = 0;

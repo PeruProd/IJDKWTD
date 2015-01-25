@@ -98,7 +98,7 @@ public class NotePanel extends Entity
 		this.notes.add(new Texture(Gdx.files.internal("notes/note2.png")));
 
 		
-	//	setVisible(false);
+		setVisible(false);
 	}
 	
 	public void draw(SpriteBatch sprite){
