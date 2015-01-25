@@ -13,7 +13,7 @@ public class Player extends Entity{
 	private Inventory inventory = new Inventory(game);;
 	private boolean canTakeSomethingAnim = false;
 	private InGameScreen igs;
-	private int nbNote = 0;
+	private int nbNote = -1;
 	
 
 	public Player(ijdkwtd game) {

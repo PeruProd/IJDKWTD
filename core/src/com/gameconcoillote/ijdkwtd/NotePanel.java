@@ -71,7 +71,9 @@ public class NotePanel extends Entity
 
 		@Override
 		public void activate() {
-			if(this.notePanel.currentNote+1 < this.notePanel.notes.size())
+			
+			if(this.notePanel.currentNote+1 < this.notePanel.notes.size() && 
+					this.notePanel.currentNote+1 < this.notePanel.player.nbNote() )
 			{
 				this.notePanel.currentNote++;
 			}
@@ -85,20 +87,37 @@ public class NotePanel extends Entity
 	private ArrowRightItem arrowRight = new ArrowRightItem(game,this);
 	private ArrayList<Texture> notes = new ArrayList<Texture>();
 	private int currentNote = 0;
+	private Player player;
 	
-	public NotePanel(ijdkwtd game,InGameScreen i) {
-		super(game,new Texture(Gdx.files.internal("item/note_lecture.png")), 200, 200);
-		this.igs = i;
+	public NotePanel(ijdkwtd game,Player p) {
+		super(game,new Texture(Gdx.files.internal("item/note_lecture.png")),ijdkwtd.WIDTH/3,ijdkwtd.HEIGHT/6);
+	
 		
-		this.igs.addEntity(this.cross);
-		this.igs.addEntity(this.arrowLeft);
-		this.igs.addEntity(this.arrowRight);
+		/*this.game.addEntity(this.cross);
+		this.game.addEntity(this.arrowLeft);
+		this.game.addEntity(this.arrowRight);*/
+		
 		
 		this.notes.add(new Texture(Gdx.files.internal("notes/note1.png")));
 		this.notes.add(new Texture(Gdx.files.internal("notes/note2.png")));
-
+		this.player = p;
 		
 		setVisible(false);
+	}
+	
+	public CrossItem getCross()
+	{
+		return this.cross;
+	}
+	
+	public ArrowLeftItem getArrowLeft()
+	{
+		return this.arrowLeft;
+	}
+	
+	public ArrowRightItem getArrowRight()
+	{
+		return this.arrowRight;
 	}
 	
 	public void draw(SpriteBatch sprite){
@@ -112,6 +131,8 @@ public class NotePanel extends Entity
 			sprite.end();
 		}
 	}
+	
+	
 	
 	public void setVisible(boolean b)
 	{

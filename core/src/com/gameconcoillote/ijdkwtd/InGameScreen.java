@@ -27,7 +27,9 @@ public class InGameScreen implements Screen{
 	
 	public InGameScreen(ijdkwtd game){
 		//player
-
+		
+		this.game= game; 
+		
 		this.player = new Player(game);
 
 		entities.add(this.player);
@@ -37,7 +39,9 @@ public class InGameScreen implements Screen{
 		batch=new SpriteBatch();
 		font= new BitmapFont();
 		font.setColor(Color.YELLOW);
-		this.notePanel=  new NotePanel(game,this); 
+		
+		this.notePanel=  new NotePanel(this.game,this.player); 
+		
 		//test takeitem
 
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
@@ -48,7 +52,12 @@ public class InGameScreen implements Screen{
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
 
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-		entities.add(new NotePanel(game,this));
+		
+		entities.add(this.notePanel);
+		entities.add(this.notePanel.getCross());
+		entities.add(this.notePanel.getArrowLeft());
+		entities.add(this.notePanel.getArrowRight());
+		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
 

@@ -10,9 +10,13 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     private int dt;//main game loop time
     private Music music;
 
+    	
+   
+    
     @Override
     public void create(){
-        inGameScreen = new InGameScreen(this);
+        
+    	inGameScreen = new InGameScreen(this);
         menuScreen = new MenuScreen(this);
         gameOver = new GameOver(this);
         Gdx.input.setInputProcessor(this);
@@ -21,8 +25,21 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
         music.setLooping(false);
         music.setVolume(0.5f);
         music.play();
+        
     }
+    
+    public void addEntity(Entity en)
+    {
+    	if(getScreen() != null)
+    	{
+	    	if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0)
+	    	{
+	    		((InGameScreen) getScreen()).addEntity(en);
+	    	}
+    	}
 
+    }
+    
     @Override
     public boolean keyDown(int keycode){
         return false;
