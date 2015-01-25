@@ -15,11 +15,10 @@ public class InGameScreen implements Screen{
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
 	private ArrayList<Background> level = new  ArrayList<Background>();
 	private ArrayList<String> dialogText = new ArrayList<String>();
-
 	private Player player;
 	private SpriteBatch batch;
 	private BitmapFont font;
-	private String text="PeruProd";
+	@SuppressWarnings("unused")
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
@@ -29,9 +28,7 @@ public class InGameScreen implements Screen{
 	
 	public InGameScreen(ijdkwtd game){
 		//player
-
 		this.player = new Player(game);
-
 		entities.add(this.player);
 		//background
 		level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
@@ -41,19 +38,14 @@ public class InGameScreen implements Screen{
 		font.setColor(Color.YELLOW);
 		this.notePanel=  new NotePanel(game,this); 
 		//test takeitem
-
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
-		
-		entities.add(notePanel);
-		
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));		
+		entities.add(notePanel);		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
 		entities.add(new NotePanel(game,this));
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
-
 		//DIALOG//
 		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
 		monologue = reader.read("en"/*langue*/, "cavenoir"/*niveau*/);
@@ -83,10 +75,7 @@ public class InGameScreen implements Screen{
 		dialogText.add("Damn... This sounds very stressful...");
 		*/
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
-
-
 	}	 
-
     @Override
     public void render(float delta){
 		delta *= 1000;
@@ -106,26 +95,21 @@ public class InGameScreen implements Screen{
         player.saying(batch,font,dialogText.get(dialogCompteur));
         batch.end();
     }
-
     public void addEntity(Entity en){this.entities.add(en);}
     public Player getPlayer(){
     	return this.player;
     }
-
 	public void nextDialog(){
 		if (dialogText.size() > dialogCompteur+1)
 		dialogCompteur++;
-	}
-	
+	}	
 	public NotePanel getNotePanel()
 	{
 		return this.notePanel;
-	}
-    
+	}   
     public ArrayList<Entity> getEntities(){
     	return this.entities;
-    } 
-    
+    }    
     @Override
     public void resize(int width, int height){
         // TODO Auto-generated method stub    
