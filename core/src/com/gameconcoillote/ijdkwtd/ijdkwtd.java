@@ -4,7 +4,7 @@ import com.badlogic.gdx.*;
 import com.badlogic.gdx.audio.Music;
 
 public class ijdkwtd extends Game implements InputProcessor, ApplicationListener{
-	private Screen inGameScreen, menuScreen;
+	public Screen inGameScreen, menuScreen,gameOver;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
     private int dt;//main game loop time
@@ -14,6 +14,7 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     public void create(){
         inGameScreen = new InGameScreen(this);
         menuScreen = new MenuScreen(this);
+        gameOver = new GameOver(this);
         Gdx.input.setInputProcessor(this);
         setScreen(menuScreen);
         music = Gdx.audio.newMusic(Gdx.files.internal("music/menu.mp3"));

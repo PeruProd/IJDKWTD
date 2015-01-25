@@ -15,7 +15,7 @@ public class MenuScreen implements Screen{
 	private ijdkwtd game;
 	public MenuScreen(ijdkwtd game){
 		//background
-		start = new Background(new Texture(Gdx.files.internal("Menu_start.png")));
+		start = new Background(game,new Texture(Gdx.files.internal("Menu_start.png")));
 		this.game = game;
 	}
 
@@ -29,7 +29,7 @@ public class MenuScreen implements Screen{
     }
 
 	public void gotoMenuLangue(){
-		start = new Background(new Texture(Gdx.files.internal("Menu_langue.png")));
+		start = new Background(game,new Texture(Gdx.files.internal("Menu_langue.png")));
 		menuLang = false;
 	}
 

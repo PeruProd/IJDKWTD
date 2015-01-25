@@ -10,17 +10,17 @@ public class Player extends Entity{
 	//where the player have to go
 	private Vector2 dest = new Vector2(125,0);//to make him not to walk distance where the player stop trying to reach the destination											 
 	private int prec = 5;//precision of the click
-	private Inventory inventory = new Inventory();;
+	private Inventory inventory = new Inventory(game);;
 	private boolean canTakeSomethingAnim = false;
 
 	
-	public Player() {
-		this(0,0);
+	public Player(ijdkwtd game) {
+		this(game,0,0);
 		this.box.width = 250;
 		this.box.height = 163;
 	}	
-	public Player(int x,int y){
-		super(new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),x,y);	
+	public Player(ijdkwtd game,int x,int y){
+		super(game,new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),x,y);
 		//idle
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),0);
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_wait_mini/wait2.png")),0);
