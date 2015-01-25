@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class InGameScreen implements Screen{    
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
-	private ArrayList<Background> level = new  ArrayList<Background>();
+	public Background level;
 	private ArrayList<String> dialogText = new ArrayList<String>();
 	private Player player;
 	private SpriteBatch batch;
@@ -30,7 +30,7 @@ public class InGameScreen implements Screen{
 		this.game= game; 
 		this.player = new Player(game);
 		//background
-		level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
+		level = new Background(game,new Texture(Gdx.files.internal("Background1.jpg")));
 		this.game = game;
 		batch=new SpriteBatch();
 		font= new BitmapFont();
@@ -78,10 +78,8 @@ public class InGameScreen implements Screen{
 		Gdx.graphics.getGL20().glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
 		music.setLooping(true);
 		music.play();
-    	for(Background bg: this.level){
-        	bg.update((int)delta);
-        	bg.draw(this.batch);
-        } 
+        level.update((int)delta);
+        level.draw(this.batch);
         for(Entity e: entities){
         	e.update((int)delta);
         	e.draw(this.batch);
