@@ -2,8 +2,11 @@ package com.gameconcoillote.ijdkwtd;
 
 
 
+import java.util.ArrayList;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.gameconcoillote.ijdkwtd.Entity;
 
 public class NotePanel extends Entity
@@ -44,7 +47,7 @@ public class NotePanel extends Entity
 
 		@Override
 		public void activate() {
-			this.notePanel.setVisible(false);
+			this.notePanel.currentNote--;
 		}
 		
 	}
@@ -63,7 +66,7 @@ public class NotePanel extends Entity
 
 		@Override
 		public void activate() {
-			this.notePanel.setVisible(false);
+			this.notePanel.currentNote++;
 		}
 		
 	}
@@ -72,6 +75,8 @@ public class NotePanel extends Entity
 	private CrossItem cross = new CrossItem(this);
 	private ArrowLeftItem arrowLeft = new ArrowLeftItem(this);
 	private ArrowRightItem arrowRight = new ArrowRightItem(this);
+	private ArrayList<Texture> notes = new ArrayList<Texture>();
+	private int currentNote = 0;
 	
 	public NotePanel(InGameScreen i) {
 		super(new Texture(Gdx.files.internal("item/note_lecture.png")), 200, 200);
@@ -80,7 +85,22 @@ public class NotePanel extends Entity
 		this.igs.addEntity(this.cross);
 		this.igs.addEntity(this.arrowLeft);
 		this.igs.addEntity(this.arrowRight);
+		
+		this.notes.add(new Texture(Gdx.files.internal("notes/note1.png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note2.png")));
 
+	}
+	
+	public void draw(SpriteBatch sprite){
+		super.draw(sprite);
+		
+		if(this.visible)
+		{
+			
+			sprite.begin();
+			sprite.draw(this.notes.get(this.currentNote),this.box.x,this.box.y);
+			sprite.end();
+		}
 	}
 	
 	public void setVisible(boolean b)
