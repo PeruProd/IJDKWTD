@@ -10,7 +10,8 @@ public class Player extends Entity{
 	//where the player have to go
 	private Vector2 dest = new Vector2(125,0);//to make him not to walk distance where the player stop trying to reach the destination											 
 	private int prec = 5;//precision of the click
-		
+	private Inventory inventory = new Inventory();;
+	
 	public Player() {
 		this(0,0);
 		this.box.width = 250;
@@ -94,5 +95,10 @@ public class Player extends Entity{
 	}
 	public void saying(SpriteBatch batch, BitmapFont font,String texte){
 		font.draw(batch,texte,Gdx.graphics.getWidth()-600,Gdx.graphics.getHeight()-100);
+	}
+	
+	public void takeItem(TakeItem it)
+	{
+		this.inventory.add(it);
 	}
 }

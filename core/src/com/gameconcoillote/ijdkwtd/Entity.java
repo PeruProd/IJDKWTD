@@ -12,6 +12,7 @@ public class Entity{
 	protected int currentAnim;//the current animation	
 	protected Vector2 speed;//max movement speed	
 	protected Vector2 move;//current movement speed
+	protected boolean visible = true;
 	
 	public Entity(Texture t){
 		this(t,0,0);	
@@ -25,9 +26,12 @@ public class Entity{
 	}	
 	//draw the entity on the screen
 	public void draw(SpriteBatch sprite){
-		sprite.begin();
-		sprite.draw(this.textures.get(this.currentAnim).getCurrentTexture(), box.x, box.y);
-		sprite.end();
+		if(this.visible)
+		{
+			sprite.begin();
+			sprite.draw(this.textures.get(this.currentAnim).getCurrentTexture(), box.x, box.y);
+			sprite.end();
+		}
 	}
 	//move the entity of Xpx et Ypx per seconds
 	public void move(int x, int y){

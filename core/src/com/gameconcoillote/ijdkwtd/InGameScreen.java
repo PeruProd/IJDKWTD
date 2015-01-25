@@ -34,7 +34,7 @@ public class InGameScreen implements Screen{
 		font= new BitmapFont();
 		font.setColor(Color.YELLOW);		
 		//test takeitem
-		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),300,214));
+		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
 
 		//DIALOG//
 		dialogText.add("Hi you.");
