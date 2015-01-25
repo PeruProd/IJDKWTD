@@ -73,11 +73,13 @@ public class NotePanel extends Entity{
 	public NotePanel(ijdkwtd game,Player p) {
 
 		super(game,new Texture(Gdx.files.internal("item/note_lecture.png")),ijdkwtd.WIDTH/3,ijdkwtd.HEIGHT/6);
+		String lang = this.game.getLangue();
 		
-		this.notes.add(new Texture(Gdx.files.internal("notes/note_1_en.png")));
-		this.notes.add(new Texture(Gdx.files.internal("notes/note_2_en.png")));
-		this.notes.add(new Texture(Gdx.files.internal("notes/note_3_en.png")));
-		this.notes.add(new Texture(Gdx.files.internal("notes/note_4_en.png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_1_"+lang+".png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_2_"+lang+".png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_3_"+lang+".png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_4_"+lang+".png")));
+		
 
 		this.player = p;
 		setVisible(false);
