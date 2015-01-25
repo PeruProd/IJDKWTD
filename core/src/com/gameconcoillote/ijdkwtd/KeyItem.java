@@ -11,6 +11,7 @@ public class KeyItem extends TakeItem{
 		
 	}
 	
+
 	
 	public void use(){
 		if(game.getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0){
