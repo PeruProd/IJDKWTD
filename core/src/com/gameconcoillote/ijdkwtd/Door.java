@@ -21,7 +21,17 @@ public class Door extends Item {
         //game.level2Screen = new Level2Screen(game);
         //game.setScreen(game.level2Screen);
 
-        game.gameOver = new GameOver(game);
-        game.setScreen(game.gameOver);
+    		if(!((InGameScreen) this.game.getScreen()).getPlayer().hasAKey)
+    		{
+    			((InGameScreen) game.getScreen()).speak(game.getLangue(),"portesanscle");
+    		}
+    		else
+    		{
+    			((InGameScreen) game.getScreen()).speak(game.getLangue(),"porteaveccle");
+    			
+    			game.gameOver = new GameOver(game);
+    	        game.setScreen(game.gameOver);
+    		}
+        
     }
 }

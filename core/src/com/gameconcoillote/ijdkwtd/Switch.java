@@ -8,7 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * Created by naum on 1/25/15.
  */
 public class Switch extends Item {
-    private boolean status = false;
+    private boolean status = true;
     Texture onn = new Texture(Gdx.files.internal("switch1.jpg"));
     Texture off = new Texture(Gdx.files.internal("switch2.jpg"));
 
@@ -35,11 +35,13 @@ public class Switch extends Item {
     }
     public void activate() {
         if (status){
-            System.out.println("Switch to off");
+            System.out.println("Switch to on");
+            ((InGameScreen) game.getScreen()).level = new Background(game,new Texture(Gdx.files.internal("Background1.jpg")));
             status = false;
         }
         else{
             System.out.println("Switch to on");
+            ((InGameScreen) game.getScreen()).level = new Background(game,new Texture(Gdx.files.internal("black_Background.png")));
             status = true;
         }
     }
