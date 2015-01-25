@@ -22,6 +22,7 @@ public class InGameScreen implements Screen{
 	private String text="PeruProd";
 	private ijdkwtd game;
 	private int dialogCompteur=0;
+	Music music;
 	
 	public InGameScreen(ijdkwtd game){
 		//player
@@ -56,6 +57,8 @@ public class InGameScreen implements Screen{
 		dialogText.add("This place is creepy as \"phoque\" (like they say in Besançon)");
 		dialogText.add("Damn... This sounds is stressful...");
 
+		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
+
 
 	}	 
 
@@ -64,7 +67,6 @@ public class InGameScreen implements Screen{
 		delta *= 1000;
 		Gdx.graphics.getGL20().glClearColor( 1, 0, 0, 1 );
 		Gdx.graphics.getGL20().glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
-		Music music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
 		music.setLooping(true);
 		music.play();
     	for(Background bg: this.level){
