@@ -67,8 +67,6 @@ public class InGameScreen implements Screen{
 			dialogText.add(monologue.substring(0,index));
 			monologue = monologue.substring(index+1);
 		}while (!(monologue.equals(" ")));
-
-
 	}
     @Override
     public void render(float delta){
