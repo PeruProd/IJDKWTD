@@ -1,1 +1,1 @@
-...|Salut toi.|...|Comment vas-tu ?|...|Il semblerais que l'ont soit piégé...|...|Et bien, il faudrait que l'on se barre d'ici.|...|Dis quelque-chose !|...|Dis pomme !|...|Au moins tu ne saute pas pour rien.| 
+...|Salut toi.|...|Comment vas-tu ?|...|Il semblerais que l'ont soit piege...|...|Et bien, il faudrait que l'on se barre d'ici.|...|Dis quelque-chose !|...|Dis pomme !|...|Au moins tu ne saute pas pour rien.| 
