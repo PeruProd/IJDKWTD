@@ -13,14 +13,11 @@ public class Door extends Item {
         super(game,t);
         status = false;
     }
-
     public Door(ijdkwtd game,Texture t,int x,int y){
         super(game,t,x,y);
         status = false;
     }
-
     public void activate() {
         game.setScreen(game.gameOver);
     }
-
 }
