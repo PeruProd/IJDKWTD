@@ -76,9 +76,11 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
                 
                 if (screenY > 0 && screenY < 300){
                     langue = "en";
+
                 }else if(screenY>=300 && screenY < 500){
                     langue = "fr";
                 }else if(screenY >= 500) langue = "es";
+
                 music.dispose();
                 if (inGameScreen == null){
                     inGameScreen = new InGameScreen(this);
