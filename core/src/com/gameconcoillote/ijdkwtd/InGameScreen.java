@@ -1,7 +1,5 @@
 package com.gameconcoillote.ijdkwtd;
 
-import java.util.ArrayList;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
@@ -11,27 +9,29 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import java.util.ArrayList;
+
 public class InGameScreen implements Screen{    
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
 	private ArrayList<Background> level = new  ArrayList<Background>();
 	private ArrayList<String> dialogText = new ArrayList<String>();
-
 	private Player player;
 	private SpriteBatch batch;
 	private BitmapFont font;
-	private String text="PeruProd";
+	@SuppressWarnings("unused")
 	private ijdkwtd game;
 	private int dialogCompteur=0;
+	private Reader reader = new Reader();
+	private String langue, niveau, monologue, temp;
 	private NotePanel notePanel;
 	Music music;
 	
 	public InGameScreen(ijdkwtd game){
 		//player
-		
-		this.game= game; 
-		
-		this.player = new Player(game);
 
+		this.game= game; 
+
+		this.player = new Player(game);
 		entities.add(this.player);
 		//background
 		level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
@@ -43,14 +43,10 @@ public class InGameScreen implements Screen{
 		this.notePanel=  new NotePanel(this.game,this.player); 
 		
 		//test takeitem
-
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
-		
-		entities.add(notePanel);
-		
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));		
+		entities.add(notePanel);		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
 		
 		entities.add(this.notePanel);
@@ -60,8 +56,15 @@ public class InGameScreen implements Screen{
 		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
-
 		//DIALOG//
+		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
+		monologue = reader.read("en"/*langue*/, "cavenoir"/*niveau*/);
+		do{
+			int index = monologue.indexOf('|');
+			dialogText.add(monologue.substring(0,index));
+			monologue = monologue.substring(index+1);
+		}while (!(monologue.equals(" ")));
+		/*
 		dialogText.add("Hi you.");
 		dialogText.add("...");
 		dialogText.add("How are you ?");
@@ -80,12 +83,9 @@ public class InGameScreen implements Screen{
 		dialogText.add("But... Where are we...?");
 		dialogText.add("This place is creepy as \"phoque\" (like they say in Besançon)");
 		dialogText.add("Damn... This sounds very stressful...");
-
+		*/
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
-
-
 	}	 
-
     @Override
     public void render(float delta){
 		delta *= 1000;
@@ -105,26 +105,21 @@ public class InGameScreen implements Screen{
         player.saying(batch,font,dialogText.get(dialogCompteur));
         batch.end();
     }
-
     public void addEntity(Entity en){this.entities.add(en);}
     public Player getPlayer(){
     	return this.player;
     }
-
 	public void nextDialog(){
 		if (dialogText.size() > dialogCompteur+1)
 		dialogCompteur++;
-	}
-	
+	}	
 	public NotePanel getNotePanel()
 	{
 		return this.notePanel;
-	}
-    
+	}   
     public ArrayList<Entity> getEntities(){
     	return this.entities;
-    } 
-    
+    }    
     @Override
     public void resize(int width, int height){
         // TODO Auto-generated method stub    

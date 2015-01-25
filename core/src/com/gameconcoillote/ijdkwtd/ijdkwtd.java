@@ -4,10 +4,9 @@ import com.badlogic.gdx.*;
 import com.badlogic.gdx.audio.Music;
 
 public class ijdkwtd extends Game implements InputProcessor, ApplicationListener{
-	public Screen inGameScreen, menuScreen,gameOver;
+	public Screen inGameScreen, menuScreen,gameOver,level2Screen;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
-    private int dt;//main game loop time
     private Music music;
 
     	
@@ -19,6 +18,7 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     	inGameScreen = new InGameScreen(this);
         menuScreen = new MenuScreen(this);
         gameOver = new GameOver(this);
+        //level2Screen = new Level2Screen(this);
         Gdx.input.setInputProcessor(this);
         setScreen(menuScreen);
         music = Gdx.audio.newMusic(Gdx.files.internal("music/menu.mp3"));
@@ -40,6 +40,12 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
 
     }
     
+
+    public String getScreenName(){
+        return getScreen().getClass().getName();
+    }
+
+
     @Override
     public boolean keyDown(int keycode){
         return false;
@@ -56,21 +62,23 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button){
         if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0){
-            if (screenY > 300) {
+            if (screenY > 200) {
                 ((InGameScreen) this.inGameScreen).getPlayer().move(screenX, screenY);
             }else{
                 ((InGameScreen) this.inGameScreen).nextDialog();
             }
         }
-        else {
-            if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0) {
-                if (((MenuScreen) getScreen()).menuLang) {
-                    ((MenuScreen) getScreen()).gotoMenuLangue();
-                } else {
-                    music.dispose();
-                    setScreen(inGameScreen);
-                }
+        else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0) {
+            if (((MenuScreen) getScreen()).menuLang) {
+                ((MenuScreen) getScreen()).gotoMenuLangue();
+            } else {
+                music.dispose();
+                setScreen(inGameScreen);
             }
+        }else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.GameOver") == 0){
+            inGameScreen.dispose();
+            inGameScreen = new InGameScreen(this);
+            setScreen(inGameScreen);
         }
         return false;
     }
