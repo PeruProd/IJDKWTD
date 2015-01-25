@@ -14,7 +14,7 @@ public class Player extends Entity{
 	private boolean canTakeSomethingAnim = false;
 	private InGameScreen igs;
 	private int nbNote = 0;
-	
+	public boolean hasAKey = false;
 
 
 	public Player(ijdkwtd game){
@@ -102,6 +102,8 @@ public class Player extends Entity{
 			}
 		}		
 		super.update(dt);	
+		
+		
 	}
 	public void saying(SpriteBatch batch, BitmapFont font,String texte){
 		font.draw(batch,texte,Gdx.graphics.getWidth()-600,Gdx.graphics.getHeight()-100);

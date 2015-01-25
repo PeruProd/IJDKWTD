@@ -30,6 +30,7 @@ public class Entity{
 	public void draw(SpriteBatch sprite){
 		if(this.visible){
 			sprite.begin();
+			
 			if(this.currentAnim < this.textures.size())
 			{
 				sprite.draw(this.textures.get(this.currentAnim).getCurrentTexture(), box.x, box.y);

@@ -11,7 +11,8 @@ public class KeyItem extends TakeItem{
 	}
 	public void use(){
 		if(game.getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0){
-			((InGameScreen) game.getScreen()).getNotePanel().setVisible(true);
+			//((InGameScreen) game.getScreen()).getNotePanel().setVisible(true);
+			this.player.hasAKey = true;
 		}
 	}
 }
