@@ -21,6 +21,7 @@ public class InGameScreen implements Screen{
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
+	@SuppressWarnings("unused")
 	private String langue, niveau, monologue, temp;
 	private NotePanel notePanel;
 	Music music;
@@ -67,6 +68,8 @@ public class InGameScreen implements Screen{
 			dialogText.add(monologue.substring(0,index));
 			monologue = monologue.substring(index+1);
 		}while (!(monologue.equals(" ")));
+
+
 	}
     @Override
     public void render(float delta){

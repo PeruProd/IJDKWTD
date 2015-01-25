@@ -39,6 +39,7 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     public String getLangue(){
         return langue;
     }
+
     public void setLangue(String langue){
         this.langue = langue;
     }
