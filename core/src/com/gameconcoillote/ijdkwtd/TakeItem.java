@@ -22,7 +22,6 @@ public class TakeItem extends Item
 
 	@Override
 	public void activate() {
-		//System.out.println("TESSST");
 		
 		if(this.canTake)
 		{

@@ -84,6 +84,7 @@ public class InGameScreen implements Screen{
         batch.end();
     }
 
+    public void addEntity(Entity en){this.entities.add(en);}
     public Player getPlayer(){
     	return this.player;
     }

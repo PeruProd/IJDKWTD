@@ -11,28 +11,34 @@ public class NotePanel extends Entity
 	
 	private class CrossItem extends Item
 	{
-
-		public CrossItem() {
+		private NotePanel notePanel;
+		
+		public CrossItem(NotePanel np) {
 			super(new Texture(Gdx.files.internal("item/croix.png")));
-
+			notePanel = np;
 		}
 
 		@Override
 		public void activate() {
-			System.out.println("CROSS");
-			
+			this.notePanel.setVisible(false);
 		}
 		
 	}
 	
 	private InGameScreen igs;
-	private CrossItem cross = new CrossItem();
+	private CrossItem cross = new CrossItem(this);
 	
 	public NotePanel(InGameScreen i) {
 		super(new Texture(Gdx.files.internal("item/note_lecture.png")), 0, 0);
 		this.igs = i;
-		//this.visible = false;
-		// TODO Stub du constructeur généré automatiquement
+		this.igs.addEntity(this.cross);
+
+	}
+	
+	public void setVisible(boolean b)
+	{
+		this.cross.visible = b;
+		this.visible = b;
 	}
 	
 	
