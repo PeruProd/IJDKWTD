@@ -45,7 +45,7 @@ public class InGameScreen implements Screen{
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 400,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 500,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));	
-		
+		//entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
 		
 		entities.add(this.notePanel);
 		entities.add(this.notePanel.getCross());
@@ -86,6 +86,8 @@ public class InGameScreen implements Screen{
         batch.begin();
         player.saying(batch,font,dialogText.get(dialogCompteur));
         batch.end();
+        
+        System.out.println(game.getLangue());
     }
     public void addEntity(Entity en){this.entities.add(en);}
     public Player getPlayer(){
