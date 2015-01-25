@@ -23,7 +23,7 @@ public class NotePanel extends Entity
 			
 			this.box.x = this.notePanel.box.x-5;
 			this.box.y = this.notePanel.box.y-5;
-			
+			this.activeDist = 100000;//infinity
 		}
 
 		@Override
@@ -43,6 +43,8 @@ public class NotePanel extends Entity
 			
 			this.box.x = this.notePanel.box.x - this.notePanel.box.x/3;
 			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;
+			
+			this.activeDist = 100000;//infinity
 		}
 
 		@Override
@@ -65,7 +67,7 @@ public class NotePanel extends Entity
 			
 			this.box.x = this.notePanel.box.x + this.notePanel.box.width;
 			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;
-			
+			this.activeDist = 100000;//infinity
 			
 		}
 

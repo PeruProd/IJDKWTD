@@ -93,7 +93,7 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
             	{
             		if(((Item) e).collideWith(screenX, screenY))
             		{
-            			System.out.println((((InGameScreen)getScreen()).getPlayer().box.x) - (e.box.x));
+            			
             			if(Math.abs(  
             					(((InGameScreen)getScreen()).getPlayer().box.x) - (e.box.x)
             					) < ((Item) e).getActivationDistance())
