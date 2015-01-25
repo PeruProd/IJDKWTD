@@ -4,7 +4,7 @@ import com.badlogic.gdx.*;
 import com.badlogic.gdx.audio.Music;
 
 public class ijdkwtd extends Game implements InputProcessor, ApplicationListener{
-	public Screen inGameScreen, menuScreen,gameOver;
+	public Screen inGameScreen, menuScreen,gameOver,level2Screen;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
     private Music music;
@@ -14,12 +14,17 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
         inGameScreen = new InGameScreen(this);
         menuScreen = new MenuScreen(this);
         gameOver = new GameOver(this);
+        //level2Screen = new Level2Screen(this);
         Gdx.input.setInputProcessor(this);
         setScreen(menuScreen);
         music = Gdx.audio.newMusic(Gdx.files.internal("music/menu.mp3"));
         music.setLooping(false);
         music.setVolume(0.5f);
         music.play();
+    }
+
+    public String getScreenName(){
+        return getScreen().getClass().getName();
     }
 
     @Override
