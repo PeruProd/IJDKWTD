@@ -47,7 +47,10 @@ public class NotePanel extends Entity
 
 		@Override
 		public void activate() {
-			this.notePanel.currentNote--;
+			if(this.notePanel.currentNote-1 >= 0)
+			{
+				this.notePanel.currentNote--;
+			}
 		}
 		
 	}
@@ -66,7 +69,10 @@ public class NotePanel extends Entity
 
 		@Override
 		public void activate() {
-			this.notePanel.currentNote++;
+			if(this.notePanel.currentNote+1 < this.notePanel.notes.size())
+			{
+				this.notePanel.currentNote++;
+			}
 		}
 		
 	}
