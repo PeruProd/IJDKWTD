@@ -36,10 +36,12 @@ public class Switch extends Item {
     public void activate() {
         if (status){
             System.out.println("Switch to off");
+            ((InGameScreen) game.getScreen()).level = new Background(game,new Texture(Gdx.files.internal("black_Background.png")));
             status = false;
         }
         else{
             System.out.println("Switch to on");
+            ((InGameScreen) game.getScreen()).level = new Background(game,new Texture(Gdx.files.internal("Background1.jpg")));
             status = true;
         }
     }
