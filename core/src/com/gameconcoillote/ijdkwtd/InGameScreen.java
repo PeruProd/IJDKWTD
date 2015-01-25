@@ -18,7 +18,6 @@ public class InGameScreen implements Screen{
 	private Player player;
 	private SpriteBatch batch;
 	private BitmapFont font;
-	@SuppressWarnings("unused")
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
@@ -27,35 +26,28 @@ public class InGameScreen implements Screen{
 	Music music;
 	
 	public InGameScreen(ijdkwtd game){
-		//player
-
 		this.game= game; 
-
 		this.player = new Player(game);
-		entities.add(this.player);
 		//background
 		level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
 		this.game = game;
 		batch=new SpriteBatch();
 		font= new BitmapFont();
-		font.setColor(Color.YELLOW);
-		
-		this.notePanel=  new NotePanel(this.game,this.player); 
-		
+		font.setColor(Color.YELLOW);		
+		this.notePanel=  new NotePanel(this.game,this.player); 		
 		//test takeitem
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));		
 		entities.add(notePanel);		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-		
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));		
 		entities.add(this.notePanel);
 		entities.add(this.notePanel.getCross());
 		entities.add(this.notePanel.getArrowLeft());
-		entities.add(this.notePanel.getArrowRight());
-		
+		entities.add(this.notePanel.getArrowRight());		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
+		entities.add(this.player);
 		//DIALOG//
 		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
 		monologue = reader.read("en"/*langue*/, "cavenoir"/*niveau*/);
