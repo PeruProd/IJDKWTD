@@ -106,7 +106,7 @@ public class Player extends Entity{
 		
 	}
 	public void saying(SpriteBatch batch, BitmapFont font,String texte){
-		font.draw(batch,texte,Gdx.graphics.getWidth()-600,Gdx.graphics.getHeight()-100);
+		font.draw(batch,texte,Gdx.graphics.getWidth()-700,Gdx.graphics.getHeight()-100);
 	}
 	public void draw(SpriteBatch sprite){
 		super.draw(sprite);

@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 import java.util.ArrayList;
 
 /**
@@ -18,10 +17,9 @@ public class Level2Screen implements Screen{
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
     private ArrayList<Background> level = new  ArrayList<Background>();
     private ArrayList<String> dialogText = new ArrayList<String>();
-
     private Player player;
     private SpriteBatch batch;
-    private BitmapFont font;
+    private BitmapFont font; 
     @SuppressWarnings("unused")
 	private ijdkwtd game;
     private int dialogCompteur=0;
@@ -30,21 +28,15 @@ public class Level2Screen implements Screen{
 
     public Level2Screen(ijdkwtd game){
         //player
-
         this.player = new Player(game);
-
         entities.add(this.player);
         //background
         level.add(new Background(game,new Texture(Gdx.files.internal("Background2.jpg"))));
         this.game = game;
         //this.notePanel=  new NotePanel(game,this);
         //test takeitem;
-
         music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
-
-
     }
-
     @Override
     public void render(float delta){
         delta *= 1000;

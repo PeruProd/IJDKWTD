@@ -8,12 +8,8 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
     private Music music;
-
     private String langue = "en";
 
-    	
-   
-    
     @Override
     public void create(){
         menuScreen = new MenuScreen(this);
