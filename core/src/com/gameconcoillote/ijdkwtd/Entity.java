@@ -13,16 +13,18 @@ public class Entity{
 	protected Vector2 speed;//max movement speed	
 	protected Vector2 move;//current movement speed
 	protected boolean visible = true;
+	protected ijdkwtd game;
 	
-	public Entity(Texture t){
-		this(t,0,0);	
-	}
-	public Entity(Texture t,int x,int y){
+	public Entity(ijdkwtd game, Texture t){this(game,t,0,0);}
+	
+	public Entity(ijdkwtd game, Texture t,int x,int y){
 		this.textures .add(new AnimatedTexture(t));
 		this.currentAnim = 0;
 		this.box = new Rectangle(x,y,t.getWidth(),t.getHeight());
 		this.speed = new Vector2(100,100);//default speed of 5px/s
-		this.move = new Vector2(0,0);	
+		this.move = new Vector2(0,0);
+		this.game = game;
+
 	}	
 	//draw the entity on the screen
 	public void draw(SpriteBatch sprite){

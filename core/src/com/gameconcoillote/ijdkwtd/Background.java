@@ -6,9 +6,9 @@ import com.badlogic.gdx.graphics.Texture;
 public class Background extends Entity
 {
 
-	public Background(Texture t)
+	public Background(ijdkwtd game,Texture t)
 	{
-		super(t,0,0);
+		super(game,t,0,0);
 	}
 	
 	

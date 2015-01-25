@@ -11,8 +11,8 @@ public class Inventory extends Entity
 	
 	
 	
-	public Inventory() {
-		super(new Texture(Gdx.files.internal("bar.png")),(ijdkwtd.HEIGHT)/2,0);
+	public Inventory(ijdkwtd game) {
+		super(game,new Texture(Gdx.files.internal("bar.png")),(ijdkwtd.HEIGHT)/2,0);
 	}
 	
 	private ArrayList<Item> items = new ArrayList<Item>();
@@ -39,5 +39,15 @@ public class Inventory extends Entity
 	public int size()
 	{
 		return this.items.size();
+	}
+	
+	public boolean containNotes()
+	{
+		for(Item it: this.items)
+		{
+			if(it instanceof NoteItem) return true;
+		}
+		
+		return false;
 	}
 }

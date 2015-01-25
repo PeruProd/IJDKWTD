@@ -24,23 +24,36 @@ public class InGameScreen implements Screen{
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
 	private String langue, niveau, monologue, temp;
+	private NotePanel notePanel;
 	Music music;
 	
 	public InGameScreen(ijdkwtd game){
 		//player
-		this.player = new Player();
+
+		this.player = new Player(game);
+
 		entities.add(this.player);
 		//background
-		level.add(new Background(new Texture(Gdx.files.internal("Background1.jpg"))));
+		level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
 		this.game = game;
 		batch=new SpriteBatch();
 		font= new BitmapFont();
-		font.setColor(Color.YELLOW);		
+		font.setColor(Color.YELLOW);
+		this.notePanel=  new NotePanel(game,this); 
 		//test takeitem
-		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
-		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 100,214));
-		entities.add(new NotePanel(this));
+
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
+		
+		entities.add(notePanel);
+		
+		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
+
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
+		entities.add(new NotePanel(game,this));
+		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
+		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
+
 		//DIALOG//
 		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
 		monologue = reader.read("en"/*langue*/, "cavenoir"/*niveau*/);
@@ -102,6 +115,11 @@ public class InGameScreen implements Screen{
 	public void nextDialog(){
 		if (dialogText.size() > dialogCompteur+1)
 		dialogCompteur++;
+	}
+	
+	public NotePanel getNotePanel()
+	{
+		return this.notePanel;
 	}
     
     public ArrayList<Entity> getEntities(){

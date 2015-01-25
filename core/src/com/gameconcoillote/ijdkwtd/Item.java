@@ -6,14 +6,14 @@ import com.badlogic.gdx.graphics.Texture;
 //ex: a switch or a door etc
 public abstract class Item extends Entity
 {
-	public Item(Texture t)
+	public Item(ijdkwtd game, Texture t)
 	{
-		super(t);
+		super(game,t);
 	}
 	
-	public Item(Texture t,int x,int y)
+	public Item(ijdkwtd game,Texture t,int x,int y)
 	{
-		super(t,x,y);
+		super(game,t,x,y);
 	}
 	
 	public boolean collideWith(int x,int y)
