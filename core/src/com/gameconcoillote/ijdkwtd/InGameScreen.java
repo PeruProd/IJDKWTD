@@ -21,6 +21,7 @@ public class InGameScreen implements Screen{
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
+	@SuppressWarnings("unused")
 	private String langue, niveau, monologue, temp;
 	private NotePanel notePanel;
 	Music music;
@@ -105,8 +106,7 @@ public class InGameScreen implements Screen{
 		if (dialogText.size() > dialogCompteur+1)
 		dialogCompteur++;
 	}	
-	public NotePanel getNotePanel()
-	{
+	public NotePanel getNotePanel(){
 		return this.notePanel;
 	}   
     public ArrayList<Entity> getEntities(){

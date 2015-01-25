@@ -13,17 +13,15 @@ public class Player extends Entity{
 	private Inventory inventory = new Inventory(game);;
 	private boolean canTakeSomethingAnim = false;
 	private InGameScreen igs;
-	private int nbNote = -1;
-	
+	private int nbNote = -1;	
 
-	public Player(ijdkwtd game) {
+	public Player(ijdkwtd game){
 		this(game,0,0);
 		this.box.width = 250;
 		this.box.height = 163;
 	}	
 	public Player(ijdkwtd game,int x,int y){
 		super(game,new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),x,y);
-
 		//idle
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),0);
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_wait_mini/wait2.png")),0);
@@ -83,8 +81,7 @@ public class Player extends Entity{
 		this.dest.x = x;
 		this.dest.y = y;
 	}
-	public void update(int dt){
-		
+	public void update(int dt){	
 		if(this.box.x+this.box.width/2 < this.dest.x - this.prec){
 			this.move.x = this.speed.x;
 			this.changeAnimation(1);
@@ -95,68 +92,44 @@ public class Player extends Entity{
 		}
 		else{
 			this.move.x = 0;
-			if(this.canTakeSomethingAnim)
-			{
+			if(this.canTakeSomethingAnim){
 				this.changeAnimation(3);
 			}
-			else
-			{
+			else{
 				this.changeAnimation(0);
 			}
-		}
-			
-		
-		super.update(dt);
-		
+		}		
+		super.update(dt);	
 	}
 	public void saying(SpriteBatch batch, BitmapFont font,String texte){
 		font.draw(batch,texte,Gdx.graphics.getWidth()-600,Gdx.graphics.getHeight()-100);
 	}
-	
-	public void draw(SpriteBatch sprite)
-	{
+	public void draw(SpriteBatch sprite){
 		super.draw(sprite);
 		this.inventory.draw(sprite);
-	}
-	
-	public void takeItem(TakeItem it)
-	{
-		if(!this.canTakeSomethingAnim)
-		{
-			if(it.canTake())
-			{
-				if( !(it instanceof NoteItem)  || !this.inventory.containNotes() )
-				{
-				
+	}	
+	public void takeItem(TakeItem it){
+		if(!this.canTakeSomethingAnim){
+			if(it.canTake()){
+				if( !(it instanceof NoteItem)  || !this.inventory.containNotes() ){
 					this.inventory.add(it);
 				}
-				else
-				{
+				else{
 					it.lock();
-				}
-				
-				if(it instanceof NoteItem)
-				{
+				}	
+				if(it instanceof NoteItem){
 					this.takeNote();
-				}
-					
-			}
-			
+				}	
+			}	
 		}
 	}
-	
-	public void takeNote()
-	{
+	public void takeNote(){
 		this.nbNote++;
 	}
-	
-	public int nbNote()
-	{
+	public int nbNote(){
 		return this.nbNote;
 	}
-	
-	public InGameScreen getGame()
-	{
+	public InGameScreen getGame(){
 		return this.igs;
 	}
 }
