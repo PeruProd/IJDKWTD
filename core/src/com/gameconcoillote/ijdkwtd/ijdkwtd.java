@@ -9,9 +9,13 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
     private Music music;
 
+    	
+   
+    
     @Override
     public void create(){
-        inGameScreen = new InGameScreen(this);
+        
+    	inGameScreen = new InGameScreen(this);
         menuScreen = new MenuScreen(this);
         gameOver = new GameOver(this);
         //level2Screen = new Level2Screen(this);
@@ -21,11 +25,26 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
         music.setLooping(false);
         music.setVolume(0.5f);
         music.play();
+        
     }
+    
+    public void addEntity(Entity en)
+    {
+    	if(getScreen() != null)
+    	{
+	    	if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0)
+	    	{
+	    		((InGameScreen) getScreen()).addEntity(en);
+	    	}
+    	}
+
+    }
+    
 
     public String getScreenName(){
         return getScreen().getClass().getName();
     }
+
 
     @Override
     public boolean keyDown(int keycode){
@@ -74,7 +93,13 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
             	{
             		if(((Item) e).collideWith(screenX, screenY))
             		{
-            			((Item) e).activate();
+            			
+            			if(Math.abs(  
+            					(((InGameScreen)getScreen()).getPlayer().box.x) - (e.box.x)
+            					) < ((Item) e).getActivationDistance())
+            			{
+            				((Item) e).activate();
+            			}
             		}
             	}
             }

@@ -1,6 +1,7 @@
 package com.gameconcoillote.ijdkwtd;
 
 import java.util.ArrayList;
+
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
@@ -24,6 +25,7 @@ public class Entity{
 		this.speed = new Vector2(100,100);//default speed of 5px/s
 		this.move = new Vector2(0,0);
 		this.game = game;
+		
 
 	}	
 	//draw the entity on the screen
