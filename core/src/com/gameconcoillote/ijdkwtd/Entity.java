@@ -31,10 +31,14 @@ public class Entity{
 		if(this.visible){
 			sprite.begin();
 			
+			try
+			{
 			if(this.currentAnim < this.textures.size())
 			{
 				sprite.draw(this.textures.get(this.currentAnim).getCurrentTexture(), box.x, box.y);
 			}
+			}
+			catch(Exception e){}
 			
 			sprite.end();
 		}
