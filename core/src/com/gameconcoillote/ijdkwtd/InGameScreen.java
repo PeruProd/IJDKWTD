@@ -57,7 +57,7 @@ public class InGameScreen implements Screen{
 		dialogText.add("At least, you don't jump for no reason.");
 		dialogText.add("But... Where are we...?");
 		dialogText.add("This place is creepy as \"phoque\" (like they say in Besançon)");
-		dialogText.add("Damn... This sounds is stressful...");
+		dialogText.add("Damn... This sounds very stressful...");
 
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
 
