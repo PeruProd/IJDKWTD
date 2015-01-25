@@ -13,6 +13,7 @@ public class Player extends Entity{
 	private Inventory inventory = new Inventory();;
 	private boolean canTakeSomethingAnim = false;
 	private InGameScreen igs;
+	private int nbNote = 0;
 	
 	public Player(InGameScreen igs) {
 		this(igs,0,0);
@@ -125,10 +126,34 @@ public class Player extends Entity{
 		{
 			if(it.canTake())
 			{
-				this.inventory.add(it);
+				if( !(it instanceof NoteItem)  || !this.inventory.containNotes() )
+				{
+				
+					this.inventory.add(it);
+				}
+				else
+				{
+					it.lock();
+				}
+				
+				if(it instanceof NoteItem)
+				{
+					this.takeNote();
+				}
+					
 			}
 			
 		}
+	}
+	
+	public void takeNote()
+	{
+		this.nbNote++;
+	}
+	
+	public int nbNote()
+	{
+		return this.nbNote;
 	}
 	
 	public InGameScreen getGame()

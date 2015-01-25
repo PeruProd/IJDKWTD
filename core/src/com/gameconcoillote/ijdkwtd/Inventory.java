@@ -40,4 +40,14 @@ public class Inventory extends Entity
 	{
 		return this.items.size();
 	}
+	
+	public boolean containNotes()
+	{
+		for(Item it: this.items)
+		{
+			if(it instanceof NoteItem) return true;
+		}
+		
+		return false;
+	}
 }

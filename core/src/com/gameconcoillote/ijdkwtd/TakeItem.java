@@ -57,4 +57,11 @@ public class TakeItem extends Item
 	{
 		return this.canTake;
 	}
+	
+	public void lock()
+	{
+		this.visible =false;
+		this.canTake = false;
+		this.canActivate = false;
+	}
 }
