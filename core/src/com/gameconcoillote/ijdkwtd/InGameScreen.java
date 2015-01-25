@@ -36,11 +36,17 @@ public class InGameScreen implements Screen{
 		font.setColor(Color.YELLOW);		
 		this.notePanel=  new NotePanel(this.game,this.player); 		
 		//test takeitem
-		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));		
+	
 		entities.add(notePanel);		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));		
+		
+		
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));	
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 400,214));
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 500,214));
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));	
+		//entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
+		
 		entities.add(this.notePanel);
 		entities.add(this.notePanel.getCross());
 		entities.add(this.notePanel.getArrowLeft());
@@ -80,6 +86,8 @@ public class InGameScreen implements Screen{
         batch.begin();
         player.saying(batch,font,dialogText.get(dialogCompteur));
         batch.end();
+        
+        System.out.println(game.getLangue());
     }
     public void addEntity(Entity en){this.entities.add(en);}
     public Player getPlayer(){

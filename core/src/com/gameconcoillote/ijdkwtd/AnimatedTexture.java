@@ -34,6 +34,7 @@ public class AnimatedTexture implements Runnable{
 		}
 	}	
 	public Texture getCurrentTexture(){
+		
 		return this.textures.get(t);
 	}
 	public void addTexture(Texture tex){
