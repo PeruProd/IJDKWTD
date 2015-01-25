@@ -16,6 +16,11 @@ public class NotePanel extends Entity
 		public CrossItem(NotePanel np) {
 			super(new Texture(Gdx.files.internal("item/croix.png")));
 			notePanel = np;
+			
+			
+			this.box.x = this.notePanel.box.x-5;
+			this.box.y = this.notePanel.box.y-5;
+			
 		}
 
 		@Override
@@ -32,6 +37,9 @@ public class NotePanel extends Entity
 		public ArrowLeftItem(NotePanel np) {
 			super(new Texture(Gdx.files.internal("item/fleche_gauche_pleine.png")),0,0);
 			notePanel = np;
+			
+			this.box.x = this.notePanel.box.x - this.notePanel.box.x/3;
+			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;
 		}
 
 		@Override
@@ -48,6 +56,9 @@ public class NotePanel extends Entity
 		public ArrowRightItem(NotePanel np) {
 			super(new Texture(Gdx.files.internal("item/fleche_droite_pleine.png")),0,0);
 			notePanel = np;
+			
+			this.box.x = this.notePanel.box.x + this.notePanel.box.width;
+			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;
 		}
 
 		@Override
@@ -63,7 +74,7 @@ public class NotePanel extends Entity
 	private ArrowRightItem arrowRight = new ArrowRightItem(this);
 	
 	public NotePanel(InGameScreen i) {
-		super(new Texture(Gdx.files.internal("item/note_lecture.png")), 100, 100);
+		super(new Texture(Gdx.files.internal("item/note_lecture.png")), 200, 200);
 		this.igs = i;
 		
 		this.igs.addEntity(this.cross);
