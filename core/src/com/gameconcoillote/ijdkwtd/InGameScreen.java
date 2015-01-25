@@ -39,6 +39,7 @@ public class InGameScreen implements Screen{
 		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
 		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 100,214));
 		entities.add(new NotePanel(this));
+		entities.add(new Switch(new Texture(Gdx.files.internal("switch1.jpg")),753,166));
 		//DIALOG//
 		dialogText.add("Hi you.");
 		dialogText.add("...");
