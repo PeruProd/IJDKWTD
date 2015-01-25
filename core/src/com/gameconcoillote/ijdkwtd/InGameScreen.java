@@ -1,7 +1,5 @@
 package com.gameconcoillote.ijdkwtd;
 
-import java.util.ArrayList;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
@@ -10,6 +8,8 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+import java.util.ArrayList;
 
 public class InGameScreen implements Screen{    
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
@@ -22,6 +22,8 @@ public class InGameScreen implements Screen{
 	private String text="PeruProd";
 	private ijdkwtd game;
 	private int dialogCompteur=0;
+	private Reader reader = new Reader();
+	private String langue, niveau, monologue, temp;
 	Music music;
 	
 	public InGameScreen(ijdkwtd game){
@@ -40,6 +42,14 @@ public class InGameScreen implements Screen{
 		entities.add(new TakeItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 100,214));
 		entities.add(new NotePanel(this));
 		//DIALOG//
+		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
+		monologue = reader.read("en"/*langue*/, "cavenoir"/*niveau*/);
+		do{
+			int index = monologue.indexOf('|');
+			dialogText.add(monologue.substring(0,index));
+			monologue = monologue.substring(index+1);
+		}while (!(monologue.equals(" ")));
+		/*
 		dialogText.add("Hi you.");
 		dialogText.add("...");
 		dialogText.add("How are you ?");
@@ -58,7 +68,7 @@ public class InGameScreen implements Screen{
 		dialogText.add("But... Where are we...?");
 		dialogText.add("This place is creepy as \"phoque\" (like they say in Besançon)");
 		dialogText.add("Damn... This sounds very stressful...");
-
+		*/
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
 
 
