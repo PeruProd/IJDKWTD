@@ -14,7 +14,6 @@ public class StageScreen implements Screen {
 		stage=new Stage();
 		this.game = game;
 	}
-
 	@Override
 	public void show(){
 		stage=new Stage();

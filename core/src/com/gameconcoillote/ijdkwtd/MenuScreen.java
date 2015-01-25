@@ -1,12 +1,10 @@
 package com.gameconcoillote.ijdkwtd;
 
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 
 public class MenuScreen implements Screen{
 	private Background start;
@@ -18,7 +16,6 @@ public class MenuScreen implements Screen{
 		start = new Background(game,new Texture(Gdx.files.internal("Menu_start.png")));
 		this.game = game;
 	}
-
 	@Override
     public void render(float delta){
 		delta *= 1000;
@@ -27,12 +24,10 @@ public class MenuScreen implements Screen{
         start.update((int)delta);
         start.draw(this.batch);
     }
-
 	public void gotoMenuLangue(){
 		start = new Background(game,new Texture(Gdx.files.internal("Menu_langue.png")));
 		menuLang = false;
 	}
-
     @Override
     public void resize(int width, int height){
         // TODO Auto-generated method stub    
@@ -57,5 +52,4 @@ public class MenuScreen implements Screen{
 	public void dispose(){
 
 	}
-
 }

@@ -20,5 +20,4 @@ public class Reader {
         String txt = file.readString();
         return txt;
     }
-
 }

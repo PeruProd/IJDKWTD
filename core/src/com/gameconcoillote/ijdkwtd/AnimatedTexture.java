@@ -25,7 +25,9 @@ public class AnimatedTexture implements Runnable{
 		try{
 			this.thread.sleep(this.delay);
 			this.t++;
-			if(this.t >= textures.size()) this.t=0;
+			if(this.t >= textures.size()){
+				this.t=0;
+			}
 		} 
 		catch (InterruptedException e){
 			e.printStackTrace();

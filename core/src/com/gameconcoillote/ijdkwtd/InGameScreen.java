@@ -21,6 +21,7 @@ public class InGameScreen implements Screen{
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
+	@SuppressWarnings("unused")
 	private String langue, niveau, monologue, temp;
 	private NotePanel notePanel;
 	Music music;
@@ -55,13 +56,8 @@ public class InGameScreen implements Screen{
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
 		entities.add(this.player);
 		//DIALOG//
-		//TODO Faire un appel de la crÃ©ation de monologue grace Ã  la langue et le niveau.
-		monologue = reader.read("en"/*langue*/, "cavenoir"/*niveau*/);
-		do{
-			int index = monologue.indexOf('|');
-			dialogText.add(monologue.substring(0,index));
-			monologue = monologue.substring(index+1);
-		}while (!(monologue.equals(" ")));
+		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
+		speak("en"/*langue*/, "cavedebut"/*niveau*/);
 		/*
 		dialogText.add("Hi you.");
 		dialogText.add("...");
@@ -79,11 +75,20 @@ public class InGameScreen implements Screen{
 		dialogText.add("...");
 		dialogText.add("At least, you don't jump for no reason.");
 		dialogText.add("But... Where are we...?");
-		dialogText.add("This place is creepy as \"phoque\" (like they say in BesanÃ§on)");
+		dialogText.add("This place is creepy as \"phoque\" (like they say in Besançon)");
 		dialogText.add("Damn... This sounds very stressful...");
 		*/
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
-	}	 
+	}
+
+	public void speak(String langue, String cas){
+		monologue = reader.read(langue, cas);
+		do{
+			int index = monologue.indexOf('|');
+			dialogText.add(monologue.substring(0,index));
+			monologue = monologue.substring(index+1);
+		}while (!(monologue.equals(" ")));
+	}
     @Override
     public void render(float delta){
 		delta *= 1000;
@@ -111,8 +116,7 @@ public class InGameScreen implements Screen{
 		if (dialogText.size() > dialogCompteur+1)
 		dialogCompteur++;
 	}	
-	public NotePanel getNotePanel()
-	{
+	public NotePanel getNotePanel(){
 		return this.notePanel;
 	}   
     public ArrayList<Entity> getEntities(){

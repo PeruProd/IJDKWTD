@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 
 public class GameOver implements Screen{
     ijdkwtd g;
-
+    
     public GameOver(ijdkwtd game){
         g = game;
     }
