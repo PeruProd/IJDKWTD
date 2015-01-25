@@ -21,6 +21,7 @@ public class InGameScreen implements Screen{
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
+	@SuppressWarnings("unused")
 	private String langue, niveau, monologue, temp;
 	private NotePanel notePanel;
 	Music music;
@@ -45,7 +46,7 @@ public class InGameScreen implements Screen{
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 400,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 500,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));	
-		entities.add(new KeyItem(game,new Texture(Gdx.files.internal("item/clé_inventaire.png")),this.player, 200,214));	
+		entities.add(new KeyItem(game,new Texture(Gdx.files.internal("item/cle_inventaire.png")),this.player, 200,214));	
 		
 		entities.add(this.notePanel);
 		entities.add(this.notePanel.getCross());
