@@ -20,7 +20,7 @@ public class Level2Screen implements Screen{
     private ArrayList<String> dialogText = new ArrayList<String>();
 
     private Player player;
-    private SpriteBatch batch;
+    private SpriteBatch batch = new SpriteBatch();
     private BitmapFont font;
     @SuppressWarnings("unused")
 	private ijdkwtd game;
