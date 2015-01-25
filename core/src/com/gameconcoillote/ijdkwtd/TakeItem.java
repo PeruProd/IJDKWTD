@@ -42,6 +42,11 @@ public class TakeItem extends Item
 		System.out.println("SALUT");
 	}
 	
+	public void update(int dt)
+	{
+		super.update(dt);;
+	}
+	
 	public void take()
 	{
 		if(this.canTake)
