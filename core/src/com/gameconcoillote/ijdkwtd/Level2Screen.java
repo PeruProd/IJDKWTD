@@ -41,7 +41,7 @@ public class Level2Screen implements Screen {
         batch=new SpriteBatch();
         font= new BitmapFont();
         font.setColor(Color.YELLOW);
-        this.notePanel=  new NotePanel(game,this);
+        //this.notePanel=  new NotePanel(game,this);
         //test takeitem
 
         entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
@@ -52,7 +52,7 @@ public class Level2Screen implements Screen {
         entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
 
         entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-        entities.add(new NotePanel(game,this));
+        //entities.add(new NotePanel(game,this));
         entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
         entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
 
@@ -144,6 +144,4 @@ public class Level2Screen implements Screen {
     public void dispose(){
         // TODO Auto-generated method stub
     }
-}
-
 }
