@@ -50,7 +50,7 @@ public class InGameScreen implements Screen{
 		entities.add(this.player);
 		//DIALOG//
 		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
-		speak("en"/*langue*/, "cavenoir"/*niveau*/);
+		speak("en"/*langue*/, "cavedebut"/*niveau*/);
 		/*
 		dialogText.add("Hi you.");
 		dialogText.add("...");
