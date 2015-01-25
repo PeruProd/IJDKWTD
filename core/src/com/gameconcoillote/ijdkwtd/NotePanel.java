@@ -16,8 +16,8 @@ public class NotePanel extends Entity
 	{
 		private NotePanel notePanel;
 		
-		public CrossItem(NotePanel np) {
-			super(new Texture(Gdx.files.internal("item/croix.png")));
+		public CrossItem(ijdkwtd game,NotePanel np) {
+			super(game,new Texture(Gdx.files.internal("item/croix.png")));
 			notePanel = np;
 			
 			
@@ -37,8 +37,8 @@ public class NotePanel extends Entity
 	{
 		private NotePanel notePanel;
 		
-		public ArrowLeftItem(NotePanel np) {
-			super(new Texture(Gdx.files.internal("item/fleche_gauche_pleine.png")),0,0);
+		public ArrowLeftItem(ijdkwtd game,NotePanel np) {
+			super(game,new Texture(Gdx.files.internal("item/fleche_gauche_pleine.png")),0,0);
 			notePanel = np;
 			
 			this.box.x = this.notePanel.box.x - this.notePanel.box.x/3;
@@ -59,8 +59,8 @@ public class NotePanel extends Entity
 	{
 		private NotePanel notePanel;
 		
-		public ArrowRightItem(NotePanel np) {
-			super(new Texture(Gdx.files.internal("item/fleche_droite_pleine.png")),0,0);
+		public ArrowRightItem(ijdkwtd game,NotePanel np) {
+			super(game,new Texture(Gdx.files.internal("item/fleche_droite_pleine.png")),0,0);
 			notePanel = np;
 			
 			this.box.x = this.notePanel.box.x + this.notePanel.box.width;
@@ -80,14 +80,14 @@ public class NotePanel extends Entity
 	}
 	
 	private InGameScreen igs;
-	private CrossItem cross = new CrossItem(this);
-	private ArrowLeftItem arrowLeft = new ArrowLeftItem(this);
-	private ArrowRightItem arrowRight = new ArrowRightItem(this);
+	private CrossItem cross = new CrossItem(game,this);
+	private ArrowLeftItem arrowLeft = new ArrowLeftItem(game,this);
+	private ArrowRightItem arrowRight = new ArrowRightItem(game,this);
 	private ArrayList<Texture> notes = new ArrayList<Texture>();
 	private int currentNote = 0;
 	
-	public NotePanel(InGameScreen i) {
-		super(new Texture(Gdx.files.internal("item/note_lecture.png")), 200, 200);
+	public NotePanel(ijdkwtd game,InGameScreen i) {
+		super(game,new Texture(Gdx.files.internal("item/note_lecture.png")), 200, 200);
 		this.igs = i;
 		
 		this.igs.addEntity(this.cross);

@@ -13,13 +13,13 @@ public class Switch extends Item {
     Texture onn = new Texture(Gdx.files.internal("switch1.jpg"));
     Texture off = new Texture(Gdx.files.internal("switch2.jpg"));
 
-    public Switch(Texture t){
-        super(t);
+    public Switch(ijdkwtd game,Texture t){
+        super(game,t);
         status = false;
     }
 
-    public Switch(Texture t,int x,int y){
-        super(t,x,y);
+    public Switch(ijdkwtd game,Texture t,int x,int y){
+        super(game,t,x,y);
         status = false;
     }
 

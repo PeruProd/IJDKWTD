@@ -10,13 +10,13 @@ public class TakeItem extends Item
 	private boolean canActivate = false;
 	private boolean oneUse = false;
 	
-	public TakeItem(Texture t,Player p) {
-		super(t);
+	public TakeItem(ijdkwtd game,Texture t,Player p) {
+		super(game,t);
 		this.player = p;
 	}
 	
-	public TakeItem(Texture t,Player p,int x,int y) {
-		super(t,x,y);
+	public TakeItem(ijdkwtd game,Texture t,Player p,int x,int y) {
+		super(game,t,x,y);
 		this.player = p;
 	}
 

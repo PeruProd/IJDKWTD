@@ -22,26 +22,38 @@ public class InGameScreen implements Screen{
 	private String text="PeruProd";
 	private ijdkwtd game;
 	private int dialogCompteur=0;
-	private NotePanel notePanel = new NotePanel(this);
+	private NotePanel notePanel;
 	Music music;
 	
 	public InGameScreen(ijdkwtd game){
 		//player
-		this.player = new Player(this);
+
+		this.player = new Player(game);
+
 		entities.add(this.player);
 		//background
-		level.add(new Background(new Texture(Gdx.files.internal("Background1.jpg"))));
+		level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
 		this.game = game;
 		batch=new SpriteBatch();
 		font= new BitmapFont();
-		font.setColor(Color.YELLOW);		
+		font.setColor(Color.YELLOW);
+		this.notePanel=  new NotePanel(game,this); 
 		//test takeitem
-		entities.add(new NoteItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-		entities.add(new NoteItem(new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
+
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
+		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
 		
 		entities.add(notePanel);
 		
-		entities.add(new Switch(new Texture(Gdx.files.internal("switch1.jpg")),753,166));
+		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
+
+		entities.add(new TakeItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
+		entities.add(new TakeItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
+		entities.add(new TakeItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 100,214));
+		entities.add(new NotePanel(game,this));
+		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
+		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
+
 		//DIALOG//
 		dialogText.add("Hi you.");
 		dialogText.add("...");
