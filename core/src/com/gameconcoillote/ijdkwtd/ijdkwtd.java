@@ -7,13 +7,16 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
 	public Screen inGameScreen, menuScreen,gameOver,level2Screen;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
-    private Music music;  
+    private Music music;
+
+    private String langue = "en";
+
+    	
+   
     
     @Override
-    public void create(){        
-    	inGameScreen = new InGameScreen(this);
+    public void create(){
         menuScreen = new MenuScreen(this);
-        gameOver = new GameOver(this);
         //level2Screen = new Level2Screen(this);
         Gdx.input.setInputProcessor(this);
         setScreen(menuScreen);
@@ -32,6 +35,11 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     public String getScreenName(){
         return getScreen().getClass().getName();
     }
+
+    public String getLangue(){
+        return langue;
+    }
+
     @Override
     public boolean keyDown(int keycode){
         return false;
@@ -58,12 +66,19 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
         else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0) {
             if (((MenuScreen) getScreen()).menuLang) {
                 ((MenuScreen) getScreen()).gotoMenuLangue();
-            } else{
+            } else {
+                if (screenY > 200){
+                    langue = "en";
+                }else{
+                    langue = "fr";
+                }
                 music.dispose();
+                if (inGameScreen == null){
+                    inGameScreen = new InGameScreen(this);
+                }
                 setScreen(inGameScreen);
             }
-        }
-        else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.GameOver") == 0){
+        }else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.GameOver") == 0){
             inGameScreen.dispose();
             inGameScreen = new InGameScreen(this);
             setScreen(inGameScreen);
@@ -83,6 +98,7 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
             	}
             }
         }
+        
         return false;
     }
     @Override
