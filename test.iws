@@ -3,40 +3,6 @@
   <component name="ChangeListManager">
     <list id="35745079-f3b3-496d-98d5-dd023a45d25d" name="Default" comment="Declaration, initialisation and use of music in InGameScreen resolved" />
     <list default="true" id="ebd9d6bb-6b57-47a2-bc38-52467248b328" name="Revert: " comment="Reader.java et fonction s'en servant pour lire textes en .txt">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/assets/door1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/assets/notes/note1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/desktop/bin/notes/note1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/assets/notes/note2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/desktop/bin/notes/note2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/assets/switch1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/desktop/bin/switch1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/assets/switch2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/desktop/bin/switch2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/bin/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Door.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NoteItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Switch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/bin/com/gameconcoillote/ijdkwtd/Entity.class" afterPath="$PROJECT_DIR$/core/bin/com/gameconcoillote/ijdkwtd/Entity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/bin/com/gameconcoillote/ijdkwtd/ijdkwtd.class" afterPath="$PROJECT_DIR$/core/bin/com/gameconcoillote/ijdkwtd/ijdkwtd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/bin/.gitignore" afterPath="$PROJECT_DIR$/desktop/bin/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Background.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Background.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Entity.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Inventory.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Inventory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Item.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuScreen.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NotePanel.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NotePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/TakeItem.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/TakeItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java" afterPath="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/core/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/desktop/.settings/org.eclipse.jdt.core.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.iws" afterPath="$PROJECT_DIR$/test.iws" />
     </list>
     <ignored path="test.iws" />
@@ -164,8 +130,8 @@
       <file leaf-file-name="Reader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Reader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1528777" vertical-offset="0" max-vertical-offset="556">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.48920864" vertical-offset="0" max-vertical-offset="556">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1519,7 +1485,13 @@
       <option name="project" value="LOCAL" />
       <updated>1422177776114</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Reader.java et fonction s'en servant pour lire textes en .txt">
+      <created>1422185144104</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1422185144104</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1527,12 +1499,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.159375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32796317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32796317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2099,8 +2071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1528777" vertical-offset="0" max-vertical-offset="556">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.48920864" vertical-offset="0" max-vertical-offset="556">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
