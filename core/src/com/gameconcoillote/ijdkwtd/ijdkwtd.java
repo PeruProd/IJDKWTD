@@ -39,7 +39,7 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button){
         if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0){
-            if (screenY > 300) {
+            if (screenY > 200) {
                 ((InGameScreen) this.inGameScreen).getPlayer().move(screenX, screenY);
             }else{
                 ((InGameScreen) this.inGameScreen).nextDialog();
