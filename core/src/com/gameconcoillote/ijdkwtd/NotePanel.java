@@ -16,7 +16,8 @@ public class NotePanel extends Entity{
 			super(game,new Texture(Gdx.files.internal("item/croix.png")));
 			notePanel = np;			
 			this.box.x = this.notePanel.box.x-5;
-			this.box.y = this.notePanel.box.y-5;		
+			this.box.y = this.notePanel.box.y-5;
+			this.activeDist = 100000;//infinity
 		}
 		@Override
 		public void activate(){
@@ -31,6 +32,8 @@ public class NotePanel extends Entity{
 			notePanel = np;		
 			this.box.x = this.notePanel.box.x - this.notePanel.box.x/3;
 			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;
+			
+			this.activeDist = 100000;//infinity
 		}
 		@Override
 		public void activate(){
@@ -46,7 +49,8 @@ public class NotePanel extends Entity{
 			super(game,new Texture(Gdx.files.internal("item/fleche_droite_pleine.png")),0,0);
 			notePanel = np;		
 			this.box.x = this.notePanel.box.x + this.notePanel.box.width;
-			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;	
+			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;
+			this.activeDist = 100000;//infinity
 		}
 		@Override
 		public void activate(){

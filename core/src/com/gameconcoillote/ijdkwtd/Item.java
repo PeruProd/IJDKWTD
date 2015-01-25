@@ -5,11 +5,16 @@ import com.badlogic.gdx.graphics.Texture;
 //an item is an entity which have a specific behavior when used
 //ex: a switch or a door etc
 public abstract class Item extends Entity{
+	protected int activeDist = 150;
+	
 	public Item(ijdkwtd game, Texture t){
 		super(game,t);
 	}
 	public Item(ijdkwtd game,Texture t,int x,int y){
 		super(game,t,x,y);
+	}
+	public int getActivationDistance(){
+		return this.activeDist;
 	}
 	public boolean collideWith(int x,int y){
 		return (x > this.box.x && x < this.box.x+this.box.width) && 

@@ -72,12 +72,13 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     }
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button){
-        if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0) {
-            ((InGameScreen) this.inGameScreen).getPlayer().changeAnimation(0);  
+        if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0) {            
             for(Entity e: ((InGameScreen) this.inGameScreen).getEntities()){
             	if(e instanceof Item){
-            		if(((Item) e).collideWith(screenX, screenY)){
-            			((Item) e).activate();
+            		if(((Item) e).collideWith(screenX, screenY)){	
+            			if(Math.abs((((InGameScreen)getScreen()).getPlayer().box.x) - (e.box.x)) < ((Item) e).getActivationDistance()){
+            				((Item) e).activate();
+            			}
             		}
             	}
             }

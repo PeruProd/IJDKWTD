@@ -51,12 +51,7 @@ public class InGameScreen implements Screen{
 		entities.add(this.player);
 		//DIALOG//
 		//TODO Faire un appel de la création de monologue grace à la langue et le niveau.
-		monologue = reader.read("en"/*langue*/, "cavenoir"/*niveau*/);
-		do{
-			int index = monologue.indexOf('|');
-			dialogText.add(monologue.substring(0,index));
-			monologue = monologue.substring(index+1);
-		}while (!(monologue.equals(" ")));
+		speak("en"/*langue*/, "cavedebut"/*niveau*/);
 		/*
 		dialogText.add("Hi you.");
 		dialogText.add("...");
@@ -78,7 +73,16 @@ public class InGameScreen implements Screen{
 		dialogText.add("Damn... This sounds very stressful...");
 		*/
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
-	}	 
+	}
+
+	public void speak(String langue, String cas){
+		monologue = reader.read(langue, cas);
+		do{
+			int index = monologue.indexOf('|');
+			dialogText.add(monologue.substring(0,index));
+			monologue = monologue.substring(index+1);
+		}while (!(monologue.equals(" ")));
+	}
     @Override
     public void render(float delta){
 		delta *= 1000;
