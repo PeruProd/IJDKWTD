@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>IJDKWTD</name>
+	<name>WJDKWTD</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,11 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-			<id>1422104687571</id>
-=======
-			<id>1422104995239</id>
->>>>>>> 6b15baa4c985409c69b8db1f2f90302351ad499c
+			<id>1422139501218</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -29,11 +25,11 @@
 				<arguments>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-desktop</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-core</arguments>
 					</matcher>
 					<matcher>
 						<id>org.eclipse.ui.ide.multiFilter</id>
-						<arguments>1.0-projectRelativePath-equals-true-false-core</arguments>
+						<arguments>1.0-projectRelativePath-equals-true-false-desktop</arguments>
 					</matcher>
 				</arguments>
 			</matcher>
