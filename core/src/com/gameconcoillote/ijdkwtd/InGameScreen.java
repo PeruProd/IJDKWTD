@@ -30,7 +30,7 @@ public class InGameScreen implements Screen{
 		this.game= game; 
 		this.player = new Player(game);
 		//background
-		level = new Background(game,new Texture(Gdx.files.internal("Background1.jpg")));
+		level = new Background(game,new Texture(Gdx.files.internal("black_Background.png")));
 		this.game = game;
 		batch=new SpriteBatch();
 		font= new BitmapFont();
