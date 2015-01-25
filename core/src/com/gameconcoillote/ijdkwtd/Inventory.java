@@ -26,7 +26,7 @@ public class Inventory extends Entity
 		
 		for(int i=0;i<items.size();i++)
 		{
-			this.items.get(i).setPosition((int)this.box.x,(int)(this.box.y + 64*i));
+			this.items.get(i).setPosition((int)(this.box.x + 64*i),(int)(this.box.y));
 			this.items.get(i).draw(sprite);
 		}
 	}
