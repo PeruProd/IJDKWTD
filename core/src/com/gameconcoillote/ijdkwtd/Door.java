@@ -18,6 +18,9 @@ public class Door extends Item {
         status = false;
     }
     public void activate() {
+
+
+        game.gameOver = new GameOver(game);
         game.setScreen(game.gameOver);
     }
 }
