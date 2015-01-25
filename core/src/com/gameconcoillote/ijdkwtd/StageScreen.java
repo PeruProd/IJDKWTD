@@ -6,7 +6,8 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
 public class StageScreen implements Screen {
-	Stage stage;
+	private Stage stage;
+	@SuppressWarnings("unused")
 	private ijdkwtd game;
 
 	public StageScreen(ijdkwtd game){

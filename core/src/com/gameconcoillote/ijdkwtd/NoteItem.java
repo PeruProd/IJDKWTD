@@ -1,6 +1,5 @@
 package com.gameconcoillote.ijdkwtd;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Texture;
 
 public class NoteItem extends TakeItem

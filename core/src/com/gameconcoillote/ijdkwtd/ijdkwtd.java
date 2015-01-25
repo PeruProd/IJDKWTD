@@ -7,7 +7,6 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
 	public Screen inGameScreen, menuScreen,gameOver;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
-    private int dt;//main game loop time
     private Music music;
 
     @Override

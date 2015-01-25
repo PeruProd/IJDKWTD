@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 
 public class Text {
-
     private String theText;
     BitmapFont bitmapFont;
     SpriteBatch spriteBatch;
