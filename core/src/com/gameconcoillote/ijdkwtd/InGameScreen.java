@@ -45,7 +45,7 @@ public class InGameScreen implements Screen{
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 400,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 500,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));	
-		//entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
+		//entities.add(new KeyItem(game,this.player, 600,214));
 		
 		entities.add(this.notePanel);
 		entities.add(this.notePanel.getCross());
