@@ -73,17 +73,18 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
             if (((MenuScreen) getScreen()).menuLang) {
                 ((MenuScreen) getScreen()).gotoMenuLangue();
             } else {
-                //System.out.println("LANGUEEEEEEE" + screenY);
-                if (screenY < 300){
+                
+                if (screenY > 0 && screenY < 300){
                     langue = "en";
-                }else{
+                }else if(screenY>=300 && screenY < 500){
                     langue = "fr";
-                }
+                }else if(screenY >= 500) langue = "es";
                 music.dispose();
                 if (inGameScreen == null){
                     inGameScreen = new InGameScreen(this);
                 }
                 setScreen(inGameScreen);
+            	
             }
         }else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.GameOver") == 0){
             inGameScreen.dispose();

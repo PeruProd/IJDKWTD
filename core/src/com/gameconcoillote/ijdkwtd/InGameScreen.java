@@ -52,8 +52,9 @@ public class InGameScreen implements Screen{
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
 		entities.add(this.player);
 		//DIALOG//
-		//TODO Faire un appel de la création de monologue grace à  la langue et le niveau.
+		//TODO Faire un appel de la crï¿½ation de monologue grace ï¿½ la langue et le niveau.
 		speak(game.getLangue(), "cavedebut"/*niveau*/);
+		System.out.println(game.getLangue());////DEBUG
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
 	}
 
