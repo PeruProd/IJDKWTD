@@ -1,25 +1,27 @@
 package com.gameconcoillote.ijdkwtd;
 
-import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 
 
-public class ijdkwtd extends Game implements InputProcessor{
+public class ijdkwtd extends Game implements InputProcessor, ApplicationListener{
 	private Screen inGameScreen, menuScreen;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
     private int dt;//main game loop time
-      
+    private Music music;
+
     @Override
     public void create(){
         inGameScreen = new InGameScreen(this);
         menuScreen = new MenuScreen(this);
         Gdx.input.setInputProcessor(this);
         setScreen(menuScreen);
+        music = Gdx.audio.newMusic(Gdx.files.internal("music/menu.mp3"));
+        music.setLooping(false);
+        music.setVolume(0.5f);
+        music.play();
     }
 
     @Override
@@ -49,6 +51,7 @@ public class ijdkwtd extends Game implements InputProcessor{
                 if (((MenuScreen) getScreen()).menuLang) {
                     ((MenuScreen) getScreen()).gotoMenuLangue();
                 } else {
+                    music.dispose();
                     setScreen(inGameScreen);
                 }
             }

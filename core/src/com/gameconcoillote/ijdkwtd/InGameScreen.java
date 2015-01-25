@@ -2,7 +2,6 @@ package com.gameconcoillote.ijdkwtd;
 
 import java.util.ArrayList;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
@@ -20,6 +19,7 @@ public class InGameScreen implements Screen{
 	private Player player;
 	private SpriteBatch batch;
 	private BitmapFont font;
+	private String text="PeruProd";
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	
@@ -38,12 +38,19 @@ public class InGameScreen implements Screen{
 
 		//DIALOG//
 		dialogText.add("Hi you.");
+		dialogText.add("...");
 		dialogText.add("How are you ?");
+		dialogText.add("...");
 		dialogText.add("Seems like we're trapped...");
+		dialogText.add("...");
 		dialogText.add("You're not very talkative...");
+		dialogText.add("...");
 		dialogText.add("Well, we need to get out of this place.");
+		dialogText.add("...");
 		dialogText.add("Say something !");
+		dialogText.add("...");
 		dialogText.add("Say apple !");
+		dialogText.add("...");
 		dialogText.add("At least, you don't jump for no reason.");
 		dialogText.add("But... Where are we...?");
 		dialogText.add("This place is creepy as \"phoque\" (like they say in Besançon)");

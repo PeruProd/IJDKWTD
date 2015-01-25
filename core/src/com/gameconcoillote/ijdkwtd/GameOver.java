@@ -4,10 +4,6 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 
- /**
- * Created by Sonia on 23/01/2015.
- */
-
 public class GameOver implements Screen{
     ijdkwtd g;
 
