@@ -8,12 +8,11 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 import java.util.ArrayList;
 
 public class InGameScreen implements Screen{    
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
-	private ArrayList<Background> level = new  ArrayList<Background>();
+	public Background level;
 	private ArrayList<String> dialogText = new ArrayList<String>();
 	private Player player;
 	private SpriteBatch batch;
@@ -21,6 +20,7 @@ public class InGameScreen implements Screen{
 	private ijdkwtd game;
 	private int dialogCompteur=0;
 	private Reader reader = new Reader();
+	@SuppressWarnings("unused")
 	private String langue, niveau, monologue, temp;
 	private NotePanel notePanel;
 	Music music;
@@ -29,24 +29,21 @@ public class InGameScreen implements Screen{
 		this.game= game; 
 		this.player = new Player(game);
 		//background
-		level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
+		level = new Background(game,new Texture(Gdx.files.internal("black_Background.png")));
 		this.game = game;
 		batch=new SpriteBatch();
 		font= new BitmapFont();
-		font.setColor(Color.YELLOW);		
+		font.setColor(Color.YELLOW);
+		font.setScale(2,2);
 		this.notePanel=  new NotePanel(this.game,this.player); 		
 		//test takeitem
-	
 		entities.add(notePanel);		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-		
-		
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));	
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 400,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 500,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));	
-		entities.add(new KeyItem(game,new Texture(Gdx.files.internal("item/cl√©_inventaire.png")),this.player, 200,214));	
-		
+		entities.add(new KeyItem(game,new Texture(Gdx.files.internal("item/cle_inventaire.png")),this.player, 200,214));	
 		entities.add(this.notePanel);
 		entities.add(this.notePanel.getCross());
 		entities.add(this.notePanel.getArrowLeft());
@@ -55,7 +52,7 @@ public class InGameScreen implements Screen{
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
 		entities.add(this.player);
 		//DIALOG//
-		//TODO Faire un appel de la cr√©ation de monologue grace √† la langue et le niveau.
+		//TODO Faire un appel de la crÈation de monologue grace ‡† la langue et le niveau.
 		speak(game.getLangue(), "cavedebut"/*niveau*/);
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
 	}
@@ -75,10 +72,8 @@ public class InGameScreen implements Screen{
 		Gdx.graphics.getGL20().glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
 		music.setLooping(true);
 		music.play();
-    	for(Background bg: this.level){
-        	bg.update((int)delta);
-        	bg.draw(this.batch);
-        } 
+        level.update((int)delta);
+        level.draw(this.batch);
         for(Entity e: entities){
         	e.update((int)delta);
         	e.draw(this.batch);

@@ -8,12 +8,8 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
     private Music music;
-
     private String langue = "en";
 
-    	
-   
-    
     @Override
     public void create(){
         menuScreen = new MenuScreen(this);
@@ -67,11 +63,17 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
                 ((InGameScreen) this.inGameScreen).nextDialog();
             }
         }
+
+        if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.Level2Screen") == 0){
+            if (screenY > 200){
+                ((Level2Screen) this.level2Screen).getPlayer().move(screenX, screenY);
+            }
+        }
         else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0) {
             if (((MenuScreen) getScreen()).menuLang) {
                 ((MenuScreen) getScreen()).gotoMenuLangue();
             } else {
-                System.out.println("LANGUEEEEEEE" + screenY);
+                //System.out.println("LANGUEEEEEEE" + screenY);
                 if (screenY < 300){
                     langue = "en";
                 }else{
@@ -92,7 +94,7 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
     }
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button){
-        if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0) {            
+        if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.InGameScreen") == 0) {
             for(Entity e: ((InGameScreen) this.inGameScreen).getEntities()){
             	if(e instanceof Item){
             		if(((Item) e).collideWith(screenX, screenY)){	
@@ -103,7 +105,20 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
             	}
             }
         }
-        
+
+        if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.Level2Screen") == 0) {
+            for(Entity e: ((Level2Screen) this.level2Screen).getEntities()){
+                if(e instanceof Item){
+                    if(((Item) e).collideWith(screenX, screenY)){
+                        if(Math.abs((((Level2Screen)getScreen()).getPlayer().box.x) - (e.box.x)) < ((Item) e).getActivationDistance()){
+                            ((Item) e).activate();
+                        }
+                    }
+                }
+            }
+        }
+
+
         return false;
     }
     @Override
