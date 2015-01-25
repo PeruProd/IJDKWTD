@@ -45,15 +45,17 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
                 ((InGameScreen) this.inGameScreen).nextDialog();
             }
         }
-        else {
-            if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0) {
-                if (((MenuScreen) getScreen()).menuLang) {
-                    ((MenuScreen) getScreen()).gotoMenuLangue();
-                } else {
-                    music.dispose();
-                    setScreen(inGameScreen);
-                }
+        else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0) {
+            if (((MenuScreen) getScreen()).menuLang) {
+                ((MenuScreen) getScreen()).gotoMenuLangue();
+            } else {
+                music.dispose();
+                setScreen(inGameScreen);
             }
+        }else if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.GameOver") == 0){
+            inGameScreen.dispose();
+            inGameScreen = new InGameScreen(this);
+            setScreen(inGameScreen);
         }
         return false;
     }
