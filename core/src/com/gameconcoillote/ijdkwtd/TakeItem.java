@@ -38,7 +38,6 @@ public class TakeItem extends Item{
 	public void take(){
 		if(this.canTake && !this.locked){
 			this.player.takeItem(this);
-			//this.visible = false;
 			this.canTake = false;
 			this.canActivate = true;
 			this.activeDist = 100000;//infinity

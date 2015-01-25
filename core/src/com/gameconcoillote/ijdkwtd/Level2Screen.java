@@ -35,45 +35,10 @@ public class Level2Screen implements Screen{
 
         entities.add(this.player);
         //background
-        level.add(new Background(game,new Texture(Gdx.files.internal("Background1.jpg"))));
+        level.add(new Background(game,new Texture(Gdx.files.internal("Background2.jpg"))));
         this.game = game;
-        batch=new SpriteBatch();
-        font= new BitmapFont();
-        font.setColor(Color.YELLOW);
         //this.notePanel=  new NotePanel(game,this);
-        //test takeitem
-
-        entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-        entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));
-
-        entities.add(notePanel);
-
-        entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-
-        entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));
-        //entities.add(new NotePanel(game,this));
-        entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-        entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
-
-        //DIALOG//
-        dialogText.add("Hi you.");
-        dialogText.add("...");
-        dialogText.add("How are you ?");
-        dialogText.add("...");
-        dialogText.add("Seems like we're trapped...");
-        dialogText.add("...");
-        dialogText.add("You're not very talkative...");
-        dialogText.add("...");
-        dialogText.add("Well, we need to get out of this place.");
-        dialogText.add("...");
-        dialogText.add("Say something !");
-        dialogText.add("...");
-        dialogText.add("Say apple !");
-        dialogText.add("...");
-        dialogText.add("At least, you don't jump for no reason.");
-        dialogText.add("But... Where are we...?");
-        dialogText.add("This place is creepy as \"phoque\" (like they say in Besançon)");
-        dialogText.add("Damn... This sounds very stressful...");
+        //test takeitem;
 
         music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
 
@@ -95,9 +60,6 @@ public class Level2Screen implements Screen{
             e.update((int)delta);
             e.draw(this.batch);
         }
-        batch.begin();
-        player.saying(batch,font,dialogText.get(dialogCompteur));
-        batch.end();
     }
 
     public void addEntity(Entity en){this.entities.add(en);}

@@ -40,6 +40,10 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
         return langue;
     }
 
+    public void setLangue(String langue){
+        this.langue = langue;
+    }
+
     @Override
     public boolean keyDown(int keycode){
         return false;
@@ -67,7 +71,8 @@ public class ijdkwtd extends Game implements InputProcessor, ApplicationListener
             if (((MenuScreen) getScreen()).menuLang) {
                 ((MenuScreen) getScreen()).gotoMenuLangue();
             } else {
-                if (screenY > 200){
+                System.out.println("LANGUEEEEEEE" + screenY);
+                if (screenY < 300){
                     langue = "en";
                 }else{
                     langue = "fr";
