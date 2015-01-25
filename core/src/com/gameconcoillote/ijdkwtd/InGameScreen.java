@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 import java.util.ArrayList;
 
 public class InGameScreen implements Screen{    
@@ -34,20 +33,17 @@ public class InGameScreen implements Screen{
 		this.game = game;
 		batch=new SpriteBatch();
 		font= new BitmapFont();
-		font.setColor(Color.YELLOW);		
+		font.setColor(Color.YELLOW);
+		font.setScale(2,2);
 		this.notePanel=  new NotePanel(this.game,this.player); 		
 		//test takeitem
-	
 		entities.add(notePanel);		
 		entities.add(new Switch(game,new Texture(Gdx.files.internal("switch1.jpg")),753,166));
-		
-		
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 300,214));	
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 400,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 500,214));
 		entities.add(new NoteItem(game,new Texture(Gdx.files.internal("item/note_mur.png")),this.player, 200,214));	
 		entities.add(new KeyItem(game,new Texture(Gdx.files.internal("item/cle_inventaire.png")),this.player, 200,214));	
-		
 		entities.add(this.notePanel);
 		entities.add(this.notePanel.getCross());
 		entities.add(this.notePanel.getArrowLeft());
@@ -56,7 +52,7 @@ public class InGameScreen implements Screen{
 		entities.add(new Door(game,new Texture(Gdx.files.internal("door1.jpg")),831,47));
 		entities.add(this.player);
 		//DIALOG//
-		//TODO Faire un appel de la crÃ©ation de monologue grace Ã  la langue et le niveau.
+		//TODO Faire un appel de la création de monologue grace à  la langue et le niveau.
 		speak(game.getLangue(), "cavedebut"/*niveau*/);
 		music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
 	}
