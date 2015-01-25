@@ -6,8 +6,8 @@ public class TakeItem extends Item
 {
 
 	private Player player;
-	public boolean canTake = true;
-	public boolean canActivate = false;
+	private boolean canTake = true;
+	private boolean canActivate = false;
 	
 	public TakeItem(Texture t,Player p) {
 		super(t);
@@ -22,12 +22,11 @@ public class TakeItem extends Item
 	@Override
 	public void activate() {
 		//System.out.println("TESSST");
-		if(this.canTake)
-		{
-			take();
+		
+		take();
 			
-		}
-		else if(this.canActivate)
+		
+		if(this.canActivate)
 		{
 			use();
 			
@@ -45,9 +44,13 @@ public class TakeItem extends Item
 	public void take()
 	{
 		this.player.takeItem(this);
-		this.visible = false;
+		//this.visible = false;
 		this.canTake = false;
 		this.canActivate = true;
 	}
 
+	public boolean canTake()
+	{
+		return this.canTake;
+	}
 }

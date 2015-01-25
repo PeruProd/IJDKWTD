@@ -11,6 +11,8 @@ public class Player extends Entity{
 	private Vector2 dest = new Vector2(125,0);//to make him not to walk distance where the player stop trying to reach the destination											 
 	private int prec = 5;//precision of the click
 	private Inventory inventory = new Inventory();;
+	private boolean canTakeSomethingAnim = false;
+
 	
 	public Player() {
 		this(0,0);
@@ -65,20 +67,21 @@ public class Player extends Entity{
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_walk_left_mini/Walk14.png")),2);
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_walk_left_mini/Walk15.png")),2);	
 		//nope
-		/*super.addTextureInAnim(new Texture(Gdx.files.internal("nope1.png")),0);
-		super.addTextureInAnim(new Texture(Gdx.files.internal("nope2.png")),0);
-		super.addTextureInAnim(new Texture(Gdx.files.internal("nope3.png")),0);
-		super.addTextureInAnim(new Texture(Gdx.files.internal("nope4.png")),0);
-		super.addTextureInAnim(new Texture(Gdx.files.internal("nope5.png")),0);
-		super.addTextureInAnim(new Texture(Gdx.files.internal("nope6.png")),0);
-		super.addTextureInAnim(new Texture(Gdx.files.internal("nope7.png")),0);
-		super.addTextureInAnim(new Texture(Gdx.files.internal("nope8.png")),0);*/	
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope1.png")),3);
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope2.png")),3);
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope3.png")),3);
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope4.png")),3);
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope5.png")),3);
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope6.png")),3);
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope7.png")),3);
+		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_nope_mini/nope8.png")),3);	
 	}	
 	public void move(int x,int y){
 		this.dest.x = x;
 		this.dest.y = y;
 	}
 	public void update(int dt){
+		
 		if(this.box.x+this.box.width/2 < this.dest.x - this.prec){
 			this.move.x = this.speed.x;
 			this.changeAnimation(1);
@@ -89,16 +92,42 @@ public class Player extends Entity{
 		}
 		else{
 			this.move.x = 0;
-			this.changeAnimation(0);
+			if(this.canTakeSomethingAnim)
+			{
+				this.changeAnimation(3);
+			}
+			else
+			{
+				this.changeAnimation(0);
+			}
 		}
+			
+		
 		super.update(dt);
+		
 	}
 	public void saying(SpriteBatch batch, BitmapFont font,String texte){
 		font.draw(batch,texte,Gdx.graphics.getWidth()-600,Gdx.graphics.getHeight()-100);
 	}
 	
+	public void draw(SpriteBatch sprite)
+	{
+		super.draw(sprite);
+		this.inventory.draw(sprite);
+	}
+	
 	public void takeItem(TakeItem it)
 	{
-		this.inventory.add(it);
+		if(!this.canTakeSomethingAnim)
+		{
+			if(it.canTake())
+			{
+				this.inventory.add(it);
+			}
+			else
+			{
+				//this.canTakeSomethingAnim=true;
+			}
+		}
 	}
 }

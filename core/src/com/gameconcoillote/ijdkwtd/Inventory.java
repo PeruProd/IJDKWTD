@@ -2,14 +2,27 @@ package com.gameconcoillote.ijdkwtd;
 
 import java.util.ArrayList;
 
-public class Inventory
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+public class Inventory extends Entity
 {
+	
+	
+	
+	public Inventory() {
+		super(new Texture(Gdx.files.internal("bar.png")),(ijdkwtd.HEIGHT)/2,0);
+	}
+	
 	private ArrayList<Item> items = new ArrayList<Item>();
 	
 	
-	public Inventory()
+	
+	
+	public void draw(SpriteBatch sprite)
 	{
-		
+		super.draw(sprite);
 	}
 	
 	public void add(Item it)
