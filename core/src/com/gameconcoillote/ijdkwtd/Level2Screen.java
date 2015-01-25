@@ -8,14 +8,12 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 import java.util.ArrayList;
 
 /**
  * Created by naum on 1/25/15.
  */
-
-public class Level2Screen implements Screen {
+public class Level2Screen implements Screen{
     private ArrayList<Entity> entities = new  ArrayList<Entity>();
     private ArrayList<Background> level = new  ArrayList<Background>();
     private ArrayList<String> dialogText = new ArrayList<String>();
