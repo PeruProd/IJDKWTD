@@ -2,8 +2,6 @@ package com.gameconcoillote.ijdkwtd;
 
 import com.badlogic.gdx.*;
 import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.graphics.GL20;
-
 
 public class ijdkwtd extends Game implements InputProcessor, ApplicationListener{
 	private Screen inGameScreen, menuScreen;
