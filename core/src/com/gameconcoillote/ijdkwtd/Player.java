@@ -12,15 +12,18 @@ public class Player extends Entity{
 	private int prec = 5;//precision of the click
 	private Inventory inventory = new Inventory();;
 	private boolean canTakeSomethingAnim = false;
-
+	private InGameScreen igs;
 	
-	public Player() {
-		this(0,0);
+	public Player(InGameScreen igs) {
+		this(igs,0,0);
 		this.box.width = 250;
 		this.box.height = 163;
 	}	
-	public Player(int x,int y){
-		super(new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),x,y);	
+	
+	public Player(InGameScreen igs,int x,int y){
+		 
+		super(new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),x,y);
+		this.igs= igs;
 		//idle
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_wait_mini/wait1.png")),0);
 		super.addTextureInAnim(new Texture(Gdx.files.internal("anim_wait_mini/wait2.png")),0);
@@ -126,5 +129,10 @@ public class Player extends Entity{
 			}
 			
 		}
+	}
+	
+	public InGameScreen getGame()
+	{
+		return this.igs;
 	}
 }

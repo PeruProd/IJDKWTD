@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 public class TakeItem extends Item
 {
 
-	private Player player;
+	protected Player player;
 	private boolean canTake = true;
 	private boolean canActivate = false;
 	private boolean oneUse = false;

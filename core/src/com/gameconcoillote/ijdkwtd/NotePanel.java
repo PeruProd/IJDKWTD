@@ -65,6 +65,8 @@ public class NotePanel extends Entity
 			
 			this.box.x = this.notePanel.box.x + this.notePanel.box.width;
 			this.box.y = this.notePanel.box.y + this.notePanel.box.height/2;
+			
+			
 		}
 
 		@Override
@@ -95,6 +97,8 @@ public class NotePanel extends Entity
 		this.notes.add(new Texture(Gdx.files.internal("notes/note1.png")));
 		this.notes.add(new Texture(Gdx.files.internal("notes/note2.png")));
 
+		
+	//	setVisible(false);
 	}
 	
 	public void draw(SpriteBatch sprite){
