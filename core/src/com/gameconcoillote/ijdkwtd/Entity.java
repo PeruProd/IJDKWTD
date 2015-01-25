@@ -53,6 +53,12 @@ public class Entity{
 	public AnimatedTexture getAnim(int animIndex){
 		return this.textures.get(animIndex);
 	}
+	
+	public void setPosition(int x,int y)
+	{
+		this.box.x = x;
+		this.box.y = y;
+	}
 	public void addTextureInAnim(Texture t,int animIndex){
 		if(animIndex < this.textures.size()){
 			this.textures.get(animIndex).addTexture(t);

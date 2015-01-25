@@ -124,10 +124,7 @@ public class Player extends Entity{
 			{
 				this.inventory.add(it);
 			}
-			else
-			{
-				//this.canTakeSomethingAnim=true;
-			}
+			
 		}
 	}
 }

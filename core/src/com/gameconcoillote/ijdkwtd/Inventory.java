@@ -23,10 +23,17 @@ public class Inventory extends Entity
 	public void draw(SpriteBatch sprite)
 	{
 		super.draw(sprite);
+		
+		for(int i=0;i<items.size();i++)
+		{
+			this.items.get(i).setPosition((int)this.box.x,(int)(this.box.y + 64*i));
+			this.items.get(i).draw(sprite);
+		}
 	}
 	
 	public void add(Item it)
 	{
+		
 		this.items.add(it);
 	}
 	public int size()
