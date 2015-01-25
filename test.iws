@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="35745079-f3b3-496d-98d5-dd023a45d25d" name="Default" comment="Declaration, initialisation and use of music in InGameScreen resolved" />
-    <list default="true" id="ebd9d6bb-6b57-47a2-bc38-52467248b328" name="Revert: " comment="Reader.java et fonction s'en servant pour lire textes en .txt">
+    <list default="true" id="35745079-f3b3-496d-98d5-dd023a45d25d" name="Default" comment="Declaration, initialisation and use of music in InGameScreen resolved">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.iws" afterPath="$PROJECT_DIR$/test.iws" />
     </list>
     <ignored path="test.iws" />
@@ -22,11 +21,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="Commander">
-    <leftPanel />
-    <rightPanel />
-    <splitter proportion="0.5" />
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -78,8 +72,8 @@
       <file leaf-file-name="ijdkwtd.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1581">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1496">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,20 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_25/src.zip!/java/lang/String.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30983" max-vertical-offset="51952">
-              <caret line="1913" column="0" selection-start-line="1913" selection-start-column="0" selection-end-line="1913" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StageScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/StageScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="833">
+            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="850">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
@@ -110,7 +94,7 @@
       <file leaf-file-name="TakeItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/TakeItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1224">
+            <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1139">
               <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding />
             </state>
@@ -120,18 +104,8 @@
       <file leaf-file-name="MenuScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Reader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48920864" vertical-offset="0" max-vertical-offset="556">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1139">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,21 +113,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InGameScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NotePanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NotePanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="2125">
+              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1496" max-vertical-offset="2635">
+              <caret line="92" column="1" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InGameScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/InGameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2703">
-              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.36385256" vertical-offset="629" max-vertical-offset="2312">
+              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#490#498#0" expanded="true" />
-                <element signature="e#555#567#0" expanded="true" />
-                <element signature="e#3801#3802#0" expanded="true" />
-                <element signature="e#3832#3833#0" expanded="true" />
-                <element signature="e#3965#3966#0" expanded="true" />
-                <element signature="e#3993#3994#0" expanded="true" />
-                <element signature="e#4042#4043#0" expanded="true" />
-                <element signature="e#4075#4076#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,11 +148,9 @@
       <file leaf-file-name="Inventory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Inventory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="986">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="850">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,9 +158,21 @@
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="663">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
               <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameOver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/GameOver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="697">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,7 +189,6 @@
         <entry key=":core/IJDKWTD/" value="true" />
         <entry key=":desktop/IJDKWTD/" value="true" />
         <entry key="IJDKWTD/" value="true" />
-        <entry key="WJDKWTD/" value="true" />
       </map>
     </option>
     <option name="availableProjects">
@@ -795,26 +790,20 @@
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MyGame.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Menu.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/AnimatedTexture.java" />
+        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Entity.java" />
+        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MainMenu.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Splash.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Text.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/StageScreen.java" />
         <option value="$PROJECT_DIR$/desktop/src/com/gameconcoillote/ijdkwtd/desktop/DesktopLauncher.java" />
+        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Item.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/GameOverTest.groovy" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuSound.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuSong.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/GameOver.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Entity.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Item.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Switch.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NotePanel.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/TakeItem.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Inventory.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Background.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Door.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java" />
-        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java" />
         <option value="$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/InGameScreen.java" />
       </list>
     </option>
@@ -862,7 +851,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -953,27 +941,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WJDKWTD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1011,153 +982,6 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.gameconcoillote.ijdkwtd" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.project</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/.settings/org.eclipse.jdt.core.prefs</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/bin/com/gameconcoillote/ijdkwtd/Entity.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/bin/com/gameconcoillote/ijdkwtd/ijdkwtd.class</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Background.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Entity.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Inventory.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Item.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuScreen.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NotePanel.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/TakeItem.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/desktop/.settings/org.eclipse.jdt.core.prefs</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/desktop/bin/.gitignore</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/test.iws</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/Makefile</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/assets/door1.jpg</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/assets/notes/note1.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/assets/notes/note2.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/assets/switch1.jpg</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/assets/switch2.jpg</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/bin/.gitignore</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Door.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NoteItem.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Switch.java</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/desktop/bin/notes/note1.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/desktop/bin/notes/note2.png</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/desktop/bin/switch1.jpg</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/desktop/bin/switch2.jpg</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/InGameScreen.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Application.GameJam">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1386,8 +1210,7 @@
       <workItem from="1422124464890" duration="9000" />
       <workItem from="1422132488668" duration="5501000" />
       <workItem from="1422152589022" duration="9198000" />
-      <workItem from="1422174648595" duration="3061000" />
-      <workItem from="1422177717695" duration="2812000" />
+      <workItem from="1422174648595" duration="1708000" />
     </task>
     <task id="LOCAL-00001" summary="Create class Menu &amp; GameOver">
       <created>1422054135253</created>
@@ -1467,35 +1290,11 @@
       <option name="project" value="LOCAL" />
       <updated>1422174902170</updated>
     </task>
-    <task id="LOCAL-00014" summary="updated story">
-      <created>1422176377348</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1422176377348</updated>
-    </task>
-    <task id="LOCAL-00015" summary="updated story">
-      <created>1422177732251</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1422177732251</updated>
-    </task>
-    <task id="LOCAL-00016" summary="switch images">
-      <created>1422177776114</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1422177776114</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Reader.java et fonction s'en servant pour lire textes en .txt">
-      <created>1422185144104</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1422185144104</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45991000" />
+    <option name="totallyTimeSpent" value="41826000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1504,29 +1303,29 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.159375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32796317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17836593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31990793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17951669" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13386308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16503668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21454768" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.259375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.259375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32604167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1586,10 +1385,7 @@
     <MESSAGE value="First dialog in yellow" />
     <MESSAGE value="Fonction music" />
     <MESSAGE value="Declaration, initialisation and use of music in InGameScreen resolved" />
-    <MESSAGE value="updated story" />
-    <MESSAGE value="switch images" />
-    <MESSAGE value="Reader.java et fonction s'en servant pour lire textes en .txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reader.java et fonction s'en servant pour lire textes en .txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Declaration, initialisation and use of music in InGameScreen resolved" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1603,6 +1399,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/AnimatedTexture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1170">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/GameOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="1008">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="1800">
@@ -1626,14 +1439,6 @@
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#490#498#0" expanded="true" />
-            <element signature="e#555#567#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
-            <element signature="e#3832#3833#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3993#3994#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4075#4076#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1650,9 +1455,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1158" max-vertical-offset="2088">
           <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1696,14 +1499,6 @@
           <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#490#498#0" expanded="true" />
-            <element signature="e#555#567#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
-            <element signature="e#3832#3833#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3993#3994#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4075#4076#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1720,9 +1515,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1158" max-vertical-offset="2088">
           <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1766,14 +1559,6 @@
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#490#498#0" expanded="true" />
-            <element signature="e#555#567#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
-            <element signature="e#3832#3833#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3993#3994#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4075#4076#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1971,9 +1756,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1496">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="850">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1139">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NotePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="2125">
+          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1496" max-vertical-offset="2635">
+          <caret line="92" column="1" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/StageScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="850">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/TakeItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1020">
+        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1139">
           <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding />
         </state>
@@ -1987,92 +1824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/NotePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1632">
-          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
-          <folding>
-            <element signature="e#1718#1719#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="2312">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_25/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30983" max-vertical-offset="51952">
-          <caret line="1913" column="0" selection-start-line="1913" selection-start-column="0" selection-end-line="1913" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/StageScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="833">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/ijdkwtd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1581">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/MenuScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/InGameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2703">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#490#498#0" expanded="true" />
-            <element signature="e#555#567#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
-            <element signature="e#3832#3833#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3993#3994#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4075#4076#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/gameconcoillote/ijdkwtd/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48920864" vertical-offset="0" max-vertical-offset="556">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.36385256" vertical-offset="629" max-vertical-offset="2312">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
