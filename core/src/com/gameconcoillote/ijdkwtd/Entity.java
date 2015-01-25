@@ -33,7 +33,11 @@ public class Entity{
 		if(this.visible)
 		{
 			sprite.begin();
-			sprite.draw(this.textures.get(this.currentAnim).getCurrentTexture(), box.x, box.y);
+			if(this.currentAnim < this.textures.size())
+			{
+				sprite.draw(this.textures.get(this.currentAnim).getCurrentTexture(), box.x, box.y);
+			}
+			
 			sprite.end();
 		}
 	}

@@ -19,8 +19,7 @@ public class NotePanel extends Entity
 		public CrossItem(ijdkwtd game,NotePanel np) {
 			super(game,new Texture(Gdx.files.internal("item/croix.png")));
 			notePanel = np;
-			
-			
+
 			this.box.x = this.notePanel.box.x-5;
 			this.box.y = this.notePanel.box.y-5;
 			this.activeDist = 100000;//infinity
@@ -93,15 +92,12 @@ public class NotePanel extends Entity
 	
 	public NotePanel(ijdkwtd game,Player p) {
 		super(game,new Texture(Gdx.files.internal("item/note_lecture.png")),ijdkwtd.WIDTH/3,ijdkwtd.HEIGHT/6);
+		
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_1_en.png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_2_en.png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_3_en.png")));
+		this.notes.add(new Texture(Gdx.files.internal("notes/note_4_en.png")));
 	
-		
-		/*this.game.addEntity(this.cross);
-		this.game.addEntity(this.arrowLeft);
-		this.game.addEntity(this.arrowRight);*/
-		
-		
-		this.notes.add(new Texture(Gdx.files.internal("notes/note1.png")));
-		this.notes.add(new Texture(Gdx.files.internal("notes/note2.png")));
 		this.player = p;
 		
 		setVisible(false);
@@ -127,7 +123,6 @@ public class NotePanel extends Entity
 		
 		if(this.visible)
 		{
-			
 			sprite.begin();
 			sprite.draw(this.notes.get(this.currentNote),this.box.x,this.box.y);
 			sprite.end();
