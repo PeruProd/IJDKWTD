@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -55,6 +56,9 @@ public class InGameScreen implements Screen{
 		delta *= 1000;
 		Gdx.graphics.getGL20().glClearColor( 1, 0, 0, 1 );
 		Gdx.graphics.getGL20().glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
+		Music music = Gdx.audio.newMusic(Gdx.files.internal("music/cave.mp3"));
+		music.setLooping(true);
+		music.play();
     	for(Background bg: this.level){
         	bg.update((int)delta);
         	bg.draw(this.batch);

@@ -4,6 +4,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 
 
@@ -11,6 +12,7 @@ public class ijdkwtd extends Game implements InputProcessor{
 	private Screen inGameScreen, menuScreen;
 	public final static int WIDTH = 1024; //Gdx.graphics.getDesktopDisplayMode().width
 	public final static int HEIGHT = 768; //Gdx.graphics.getDesktopDisplayMode().height
+    private int dt;//main game loop time
       
     @Override
     public void create(){
@@ -20,15 +22,6 @@ public class ijdkwtd extends Game implements InputProcessor{
         setScreen(menuScreen);
     }
 
-    /*@Override
-    public void render(){
-    	Gdx.graphics.getGL20().glClearColor( 1, 0, 0, 1 );
-    	Gdx.graphics.getGL20().glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
-    	this.dt =(int)(System.currentTimeMillis() - this.dt);
-        super.render();
-        this.inGameScreen.render(dt);
-        this.dt = (int)System.currentTimeMillis();
-    }*/
     @Override
     public boolean keyDown(int keycode){
         return false;
@@ -51,11 +44,13 @@ public class ijdkwtd extends Game implements InputProcessor{
                 ((InGameScreen) this.inGameScreen).nextDialog();
             }
         }
-        else if(getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0){
-            if ( ((MenuScreen)getScreen()).menuLang ) {
-                ((MenuScreen) getScreen()).gotoMenuLangue();
-            }else {
-                setScreen(inGameScreen);
+        else {
+            if (getScreen().getClass().getName().compareTo("com.gameconcoillote.ijdkwtd.MenuScreen") == 0) {
+                if (((MenuScreen) getScreen()).menuLang) {
+                    ((MenuScreen) getScreen()).gotoMenuLangue();
+                } else {
+                    setScreen(inGameScreen);
+                }
             }
         }
         return false;

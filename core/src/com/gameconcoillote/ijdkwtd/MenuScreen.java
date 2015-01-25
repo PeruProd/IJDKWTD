@@ -2,17 +2,16 @@ package com.gameconcoillote.ijdkwtd;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
-import java.util.ArrayList;
 
 public class MenuScreen implements Screen{
 	private Background start;
 	private SpriteBatch batch = new SpriteBatch();
 	public boolean menuLang = true;
-
+	private Music music;
 	private ijdkwtd game;
 
 	public MenuScreen(ijdkwtd game){
@@ -28,6 +27,9 @@ public class MenuScreen implements Screen{
 		Gdx.graphics.getGL20().glClear( GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT );
         start.update((int)delta);
         start.draw(this.batch);
+		music = Gdx.audio.newMusic(Gdx.files.internal("music/menu.mp3"));
+		music.setLooping(false);
+		music.play();
     }
 
 	public void gotoMenuLangue(){
@@ -45,7 +47,7 @@ public class MenuScreen implements Screen{
     }
 	@Override
 	public void pause(){
-		// TODO Auto-generated method stub	
+
 	}
 	@Override
 	public void resume(){
@@ -57,6 +59,7 @@ public class MenuScreen implements Screen{
 	}
 	@Override
 	public void dispose(){
-		// TODO Auto-generated method stub		
+
 	}
+
 }

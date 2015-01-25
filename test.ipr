@@ -190,6 +190,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IJDKWTD.iml" filepath="$PROJECT_DIR$/IJDKWTD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WJDKWTD.iml" filepath="$PROJECT_DIR$/WJDKWTD.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/desktop/desktop.iml" filepath="$PROJECT_DIR$/desktop/desktop.iml" />
     </modules>
